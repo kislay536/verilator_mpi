@@ -1,0 +1,2135 @@
+<?xml version="1.0" ?>
+<!-- DESCRIPTION: Verilator output: XML representation of netlist -->
+<verilator_xml>
+  <files>
+    <file id="d" filename="/usr/share/verilator/include/verilated_std.sv" language="1800-2023"/>
+    <file id="c" filename="/usr/share/verilator/include/verilated_std_waiver.vlt" language="1800-2023"/>
+    <file id="a" filename="&lt;built-in&gt;" language="1800-2023"/>
+    <file id="b" filename="&lt;command-line&gt;" language="1800-2023"/>
+    <file id="f" filename="chip.v" language="1800-2023"/>
+    <file id="e" filename="chip_bridge.v" language="1800-2023"/>
+    <file id="g" filename="clk_mux.v" language="1800-2023"/>
+    <file id="h" filename="clk_se_to_diff.v" language="1800-2023"/>
+    <file id="i" filename="credit_to_valrdy.v" language="1800-2023"/>
+    <file id="j" filename="jtag.v" language="1800-2023"/>
+    <file id="k" filename="oci.v" language="1800-2023"/>
+    <file id="l" filename="pll_top.v" language="1800-2023"/>
+    <file id="m" filename="synchronizer.v" language="1800-2023"/>
+    <file id="n" filename="tile.v" language="1800-2023"/>
+    <file id="o" filename="valrdy_to_credit.v" language="1800-2023"/>
+  </files>
+  <module_files>
+    <file id="f" filename="chip.v" language="1800-2023"/>
+    <file id="e" filename="chip_bridge.v" language="1800-2023"/>
+    <file id="g" filename="clk_mux.v" language="1800-2023"/>
+    <file id="h" filename="clk_se_to_diff.v" language="1800-2023"/>
+    <file id="i" filename="credit_to_valrdy.v" language="1800-2023"/>
+    <file id="j" filename="jtag.v" language="1800-2023"/>
+    <file id="k" filename="oci.v" language="1800-2023"/>
+    <file id="l" filename="pll_top.v" language="1800-2023"/>
+    <file id="m" filename="synchronizer.v" language="1800-2023"/>
+    <file id="o" filename="valrdy_to_credit.v" language="1800-2023"/>
+    <file id="n" filename="tile.v" language="1800-2023"/>
+  </module_files>
+  <cells>
+    <cell loc="f,15,8,15,12" name="chip" submodname="chip" hier="chip">
+      <cell loc="f,333,8,333,16" name="oci_inst" submodname="OCI" hier="chip.oci_inst"/>
+      <cell loc="f,385,19,385,36" name="ref_clk_converter" submodname="clk_se_to_diff" hier="chip.ref_clk_converter"/>
+      <cell loc="f,390,12,390,21" name="clock_mux" submodname="clk_mux" hier="chip.clock_mux"/>
+      <cell loc="f,399,12,399,19" name="pll_top" submodname="pll_top" hier="chip.pll_top"/>
+      <cell loc="f,407,17,407,25" name="rst_sync" submodname="synchronizer" hier="chip.rst_sync"/>
+      <cell loc="f,412,17,412,32" name="io_clk_rst_sync" submodname="synchronizer" hier="chip.io_clk_rst_sync"/>
+      <cell loc="f,417,17,417,30" name="jtag_rst_sync" submodname="synchronizer" hier="chip.jtag_rst_sync"/>
+      <cell loc="f,422,16,422,25" name="chip_intf" submodname="chip_bridge" hier="chip.chip_intf"/>
+      <cell loc="f,452,29,452,52" name="chip_from_intf_noc1_v2c" submodname="valrdy_to_credit" hier="chip.chip_from_intf_noc1_v2c"/>
+      <cell loc="f,462,21,462,42" name="chip_to_intf_noc1_c2v" submodname="credit_to_valrdy" hier="chip.chip_to_intf_noc1_c2v"/>
+      <cell loc="f,472,29,472,52" name="chip_from_intf_noc2_v2c" submodname="valrdy_to_credit" hier="chip.chip_from_intf_noc2_v2c"/>
+      <cell loc="f,482,21,482,42" name="chip_to_intf_noc2_c2v" submodname="credit_to_valrdy" hier="chip.chip_to_intf_noc2_c2v"/>
+      <cell loc="f,492,29,492,52" name="chip_from_intf_noc3_v2c" submodname="valrdy_to_credit" hier="chip.chip_from_intf_noc3_v2c"/>
+      <cell loc="f,502,21,502,42" name="chip_to_intf_noc3_c2v" submodname="credit_to_valrdy" hier="chip.chip_to_intf_noc3_c2v"/>
+      <cell loc="f,512,9,512,18" name="jtag_port" submodname="jtag" hier="chip.jtag_port"/>
+      <cell loc="f,534,1,534,6" name="tile0" submodname="tile__T2" hier="chip.tile0"/>
+      <cell loc="f,627,1,627,6" name="tile1" submodname="tile__T2" hier="chip.tile1"/>
+    </cell>
+  </cells>
+  <netlist>
+    <module loc="f,15,8,15,12" name="chip" origName="chip" topModule="1">
+      <var loc="f,16,49,16,53" name="slew" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="slew"/>
+      <var loc="f,17,49,17,56" name="impsel1" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="impsel1"/>
+      <var loc="f,18,49,18,56" name="impsel2" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="impsel2"/>
+      <var loc="f,19,49,19,61" name="core_ref_clk" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="core_ref_clk"/>
+      <var loc="f,20,49,20,55" name="io_clk" dtype_id="1" dir="input" pinIndex="5" vartype="logic" origName="io_clk"/>
+      <var loc="f,21,49,21,54" name="rst_n" dtype_id="1" dir="input" pinIndex="6" vartype="logic" origName="rst_n"/>
+      <var loc="f,22,49,22,58" name="pll_rst_n" dtype_id="1" dir="input" pinIndex="7" vartype="logic" origName="pll_rst_n"/>
+      <var loc="f,23,49,23,55" name="clk_en" dtype_id="1" dir="input" pinIndex="8" vartype="logic" origName="clk_en"/>
+      <var loc="f,24,49,24,57" name="pll_lock" dtype_id="1" dir="output" pinIndex="9" vartype="logic" origName="pll_lock"/>
+      <var loc="f,25,49,25,59" name="pll_bypass" dtype_id="1" dir="input" pinIndex="10" vartype="logic" origName="pll_bypass"/>
+      <var loc="f,26,49,26,59" name="pll_rangea" dtype_id="2" dir="input" pinIndex="11" vartype="logic" origName="pll_rangea"/>
+      <var loc="f,27,49,27,60" name="clk_mux_sel" dtype_id="3" dir="input" pinIndex="12" vartype="logic" origName="clk_mux_sel"/>
+      <var loc="f,28,49,28,57" name="jtag_clk" dtype_id="1" dir="input" pinIndex="13" vartype="logic" origName="jtag_clk"/>
+      <var loc="f,29,49,29,59" name="jtag_rst_l" dtype_id="1" dir="input" pinIndex="14" vartype="logic" origName="jtag_rst_l"/>
+      <var loc="f,30,49,30,61" name="jtag_modesel" dtype_id="1" dir="input" pinIndex="15" vartype="logic" origName="jtag_modesel"/>
+      <var loc="f,31,49,31,60" name="jtag_datain" dtype_id="1" dir="input" pinIndex="16" vartype="logic" origName="jtag_datain"/>
+      <var loc="f,32,49,32,61" name="jtag_dataout" dtype_id="1" dir="output" pinIndex="17" vartype="logic" origName="jtag_dataout"/>
+      <var loc="f,33,49,33,58" name="async_mux" dtype_id="1" dir="input" pinIndex="18" vartype="logic" origName="async_mux"/>
+      <var loc="f,34,49,34,56" name="oram_on" dtype_id="1" dir="input" pinIndex="19" vartype="logic" origName="oram_on"/>
+      <var loc="f,35,49,35,65" name="oram_traffic_gen" dtype_id="1" dir="input" pinIndex="20" vartype="logic" origName="oram_traffic_gen"/>
+      <var loc="f,36,49,36,63" name="oram_dummy_gen" dtype_id="1" dir="input" pinIndex="21" vartype="logic" origName="oram_dummy_gen"/>
+      <var loc="f,37,49,37,63" name="intf_chip_data" dtype_id="4" dir="input" pinIndex="22" vartype="logic" origName="intf_chip_data"/>
+      <var loc="f,38,49,38,66" name="intf_chip_channel" dtype_id="3" dir="input" pinIndex="23" vartype="logic" origName="intf_chip_channel"/>
+      <var loc="f,39,49,39,70" name="intf_chip_credit_back" dtype_id="5" dir="output" pinIndex="24" vartype="logic" origName="intf_chip_credit_back"/>
+      <var loc="f,40,49,40,63" name="chip_intf_data" dtype_id="4" dir="output" pinIndex="25" vartype="logic" origName="chip_intf_data"/>
+      <var loc="f,41,49,41,66" name="chip_intf_channel" dtype_id="3" dir="output" pinIndex="26" vartype="logic" origName="chip_intf_channel"/>
+      <var loc="f,42,49,42,70" name="chip_intf_credit_back" dtype_id="5" dir="input" pinIndex="27" vartype="logic" origName="chip_intf_credit_back"/>
+      <var loc="f,43,49,43,59" name="ndmreset_i" dtype_id="1" dir="input" pinIndex="28" vartype="logic" origName="ndmreset_i"/>
+      <var loc="f,44,34,44,45" name="debug_req_i" dtype_id="3" dir="input" pinIndex="29" vartype="logic" origName="debug_req_i"/>
+      <var loc="f,45,34,45,47" name="unavailable_o" dtype_id="3" dir="output" pinIndex="30" vartype="logic" origName="unavailable_o"/>
+      <var loc="f,46,34,46,45" name="timer_irq_i" dtype_id="3" dir="input" pinIndex="31" vartype="logic" origName="timer_irq_i"/>
+      <var loc="f,47,34,47,39" name="ipi_i" dtype_id="3" dir="input" pinIndex="32" vartype="logic" origName="ipi_i"/>
+      <var loc="f,48,34,48,39" name="irq_i" dtype_id="6" dir="input" pinIndex="33" vartype="logic" origName="irq_i"/>
+      <var loc="f,50,49,50,67" name="core_ref_clk_inter" dtype_id="1" vartype="logic" origName="core_ref_clk_inter"/>
+      <var loc="f,51,49,51,61" name="io_clk_inter" dtype_id="1" vartype="logic" origName="io_clk_inter"/>
+      <var loc="f,52,49,52,60" name="rst_n_inter" dtype_id="1" vartype="logic" origName="rst_n_inter"/>
+      <var loc="f,53,49,53,64" name="pll_rst_n_inter" dtype_id="1" vartype="logic" origName="pll_rst_n_inter"/>
+      <var loc="f,54,49,54,61" name="clk_en_inter" dtype_id="1" vartype="logic" origName="clk_en_inter"/>
+      <var loc="f,55,49,55,63" name="pll_lock_inter" dtype_id="1" vartype="logic" origName="pll_lock_inter"/>
+      <var loc="f,56,49,56,65" name="pll_bypass_inter" dtype_id="1" vartype="logic" origName="pll_bypass_inter"/>
+      <var loc="f,57,49,57,65" name="pll_rangea_inter" dtype_id="2" vartype="logic" origName="pll_rangea_inter"/>
+      <var loc="f,58,49,58,66" name="clk_mux_sel_inter" dtype_id="3" vartype="logic" origName="clk_mux_sel_inter"/>
+      <var loc="f,59,49,59,63" name="jtag_clk_inter" dtype_id="1" vartype="logic" origName="jtag_clk_inter"/>
+      <var loc="f,60,49,60,65" name="jtag_rst_l_inter" dtype_id="1" vartype="logic" origName="jtag_rst_l_inter"/>
+      <var loc="f,61,49,61,70" name="jtag_rst_l_inter_sync" dtype_id="1" vartype="logic" origName="jtag_rst_l_inter_sync"/>
+      <var loc="f,62,49,62,67" name="jtag_modesel_inter" dtype_id="1" vartype="logic" origName="jtag_modesel_inter"/>
+      <var loc="f,63,49,63,66" name="jtag_datain_inter" dtype_id="1" vartype="logic" origName="jtag_datain_inter"/>
+      <var loc="f,64,49,64,67" name="jtag_dataout_inter" dtype_id="1" vartype="logic" origName="jtag_dataout_inter"/>
+      <var loc="f,65,49,65,64" name="async_mux_inter" dtype_id="1" vartype="logic" origName="async_mux_inter"/>
+      <var loc="f,66,49,66,62" name="oram_on_inter" dtype_id="1" vartype="logic" origName="oram_on_inter"/>
+      <var loc="f,67,49,67,71" name="oram_traffic_gen_inter" dtype_id="1" vartype="logic" origName="oram_traffic_gen_inter"/>
+      <var loc="f,68,49,68,69" name="oram_dummy_gen_inter" dtype_id="1" vartype="logic" origName="oram_dummy_gen_inter"/>
+      <var loc="f,69,49,69,69" name="intf_chip_data_inter" dtype_id="4" vartype="logic" origName="intf_chip_data_inter"/>
+      <var loc="f,70,49,70,72" name="intf_chip_channel_inter" dtype_id="3" vartype="logic" origName="intf_chip_channel_inter"/>
+      <var loc="f,71,49,71,76" name="intf_chip_credit_back_inter" dtype_id="5" vartype="logic" origName="intf_chip_credit_back_inter"/>
+      <var loc="f,72,49,72,69" name="chip_intf_data_inter" dtype_id="4" vartype="logic" origName="chip_intf_data_inter"/>
+      <var loc="f,73,49,73,72" name="chip_intf_channel_inter" dtype_id="3" vartype="logic" origName="chip_intf_channel_inter"/>
+      <var loc="f,74,49,74,76" name="chip_intf_credit_back_inter" dtype_id="5" vartype="logic" origName="chip_intf_credit_back_inter"/>
+      <var loc="f,75,49,75,65" name="rst_n_inter_sync" dtype_id="1" vartype="logic" origName="rst_n_inter_sync"/>
+      <var loc="f,76,49,76,67" name="rst_n_inter_sync_f" dtype_id="1" vartype="logic" origName="rst_n_inter_sync_f"/>
+      <var loc="f,77,49,77,72" name="io_clk_rst_n_inter_sync" dtype_id="1" vartype="logic" origName="io_clk_rst_n_inter_sync"/>
+      <var loc="f,78,49,78,74" name="io_clk_rst_n_inter_sync_f" dtype_id="1" vartype="logic" origName="io_clk_rst_n_inter_sync_f"/>
+      <var loc="f,79,49,79,69" name="core_ref_clk_inter_c" dtype_id="1" vartype="logic" origName="core_ref_clk_inter_c"/>
+      <var loc="f,80,49,80,69" name="core_ref_clk_inter_t" dtype_id="1" vartype="logic" origName="core_ref_clk_inter_t"/>
+      <var loc="f,81,49,81,58" name="clk_muxed" dtype_id="1" vartype="logic" origName="clk_muxed"/>
+      <var loc="f,82,49,82,56" name="pll_clk" dtype_id="1" vartype="logic" origName="pll_clk"/>
+      <var loc="f,83,49,83,75" name="intf_chip_data_inter_buf_f" dtype_id="4" vartype="logic" origName="intf_chip_data_inter_buf_f"/>
+      <var loc="f,84,49,84,78" name="intf_chip_channel_inter_buf_f" dtype_id="3" vartype="logic" origName="intf_chip_channel_inter_buf_f"/>
+      <var loc="f,85,49,85,82" name="chip_intf_credit_back_inter_buf_f" dtype_id="5" vartype="logic" origName="chip_intf_credit_back_inter_buf_f"/>
+      <var loc="f,86,49,86,69" name="chip_intf_noc1_valid" dtype_id="1" vartype="logic" origName="chip_intf_noc1_valid"/>
+      <var loc="f,87,36,87,55" name="chip_intf_noc1_data" dtype_id="7" vartype="logic" origName="chip_intf_noc1_data"/>
+      <var loc="f,88,49,88,67" name="chip_intf_noc1_rdy" dtype_id="1" vartype="logic" origName="chip_intf_noc1_rdy"/>
+      <var loc="f,89,49,89,69" name="chip_intf_noc2_valid" dtype_id="1" vartype="logic" origName="chip_intf_noc2_valid"/>
+      <var loc="f,90,36,90,55" name="chip_intf_noc2_data" dtype_id="7" vartype="logic" origName="chip_intf_noc2_data"/>
+      <var loc="f,91,49,91,67" name="chip_intf_noc2_rdy" dtype_id="1" vartype="logic" origName="chip_intf_noc2_rdy"/>
+      <var loc="f,92,49,92,69" name="chip_intf_noc3_valid" dtype_id="1" vartype="logic" origName="chip_intf_noc3_valid"/>
+      <var loc="f,93,36,93,55" name="chip_intf_noc3_data" dtype_id="7" vartype="logic" origName="chip_intf_noc3_data"/>
+      <var loc="f,94,49,94,67" name="chip_intf_noc3_rdy" dtype_id="1" vartype="logic" origName="chip_intf_noc3_rdy"/>
+      <var loc="f,95,49,95,69" name="intf_chip_noc1_valid" dtype_id="1" vartype="logic" origName="intf_chip_noc1_valid"/>
+      <var loc="f,96,36,96,55" name="intf_chip_noc1_data" dtype_id="7" vartype="logic" origName="intf_chip_noc1_data"/>
+      <var loc="f,97,49,97,67" name="intf_chip_noc1_rdy" dtype_id="1" vartype="logic" origName="intf_chip_noc1_rdy"/>
+      <var loc="f,98,49,98,69" name="intf_chip_noc2_valid" dtype_id="1" vartype="logic" origName="intf_chip_noc2_valid"/>
+      <var loc="f,99,36,99,55" name="intf_chip_noc2_data" dtype_id="7" vartype="logic" origName="intf_chip_noc2_data"/>
+      <var loc="f,100,49,100,67" name="intf_chip_noc2_rdy" dtype_id="1" vartype="logic" origName="intf_chip_noc2_rdy"/>
+      <var loc="f,101,49,101,69" name="intf_chip_noc3_valid" dtype_id="1" vartype="logic" origName="intf_chip_noc3_valid"/>
+      <var loc="f,102,36,102,55" name="intf_chip_noc3_data" dtype_id="7" vartype="logic" origName="intf_chip_noc3_data"/>
+      <var loc="f,103,49,103,67" name="intf_chip_noc3_rdy" dtype_id="1" vartype="logic" origName="intf_chip_noc3_rdy"/>
+      <var loc="f,106,49,106,77" name="processor_offchip_noc1_yummy" dtype_id="1" vartype="logic" origName="processor_offchip_noc1_yummy"/>
+      <var loc="f,109,49,109,77" name="processor_offchip_noc2_yummy" dtype_id="1" vartype="logic" origName="processor_offchip_noc2_yummy"/>
+      <var loc="f,112,49,112,77" name="processor_offchip_noc3_yummy" dtype_id="1" vartype="logic" origName="processor_offchip_noc3_yummy"/>
+      <var loc="f,113,49,113,77" name="offchip_processor_noc1_valid" dtype_id="1" vartype="logic" origName="offchip_processor_noc1_valid"/>
+      <var loc="f,114,36,114,63" name="offchip_processor_noc1_data" dtype_id="7" vartype="logic" origName="offchip_processor_noc1_data"/>
+      <var loc="f,116,49,116,77" name="offchip_processor_noc2_valid" dtype_id="1" vartype="logic" origName="offchip_processor_noc2_valid"/>
+      <var loc="f,117,36,117,63" name="offchip_processor_noc2_data" dtype_id="7" vartype="logic" origName="offchip_processor_noc2_data"/>
+      <var loc="f,119,49,119,77" name="offchip_processor_noc3_valid" dtype_id="1" vartype="logic" origName="offchip_processor_noc3_valid"/>
+      <var loc="f,120,36,120,63" name="offchip_processor_noc3_data" dtype_id="7" vartype="logic" origName="offchip_processor_noc3_data"/>
+      <var loc="f,122,49,122,64" name="proc_oram_yummy" dtype_id="1" vartype="logic" origName="proc_oram_yummy"/>
+      <var loc="f,123,49,123,64" name="oram_proc_valid" dtype_id="1" vartype="logic" origName="oram_proc_valid"/>
+      <var loc="f,124,36,124,50" name="oram_proc_data" dtype_id="7" vartype="logic" origName="oram_proc_data"/>
+      <var loc="f,125,49,125,67" name="offchip_oram_yummy" dtype_id="1" vartype="logic" origName="offchip_oram_yummy"/>
+      <var loc="f,126,49,126,67" name="oram_offchip_valid" dtype_id="1" vartype="logic" origName="oram_offchip_valid"/>
+      <var loc="f,127,36,127,53" name="oram_offchip_data" dtype_id="7" vartype="logic" origName="oram_offchip_data"/>
+      <var loc="f,130,49,130,69" name="proc_oram_yummy_oram" dtype_id="1" vartype="logic" origName="proc_oram_yummy_oram"/>
+      <var loc="f,131,49,131,69" name="oram_proc_valid_oram" dtype_id="1" vartype="logic" origName="oram_proc_valid_oram"/>
+      <var loc="f,132,36,132,55" name="oram_proc_data_oram" dtype_id="7" vartype="logic" origName="oram_proc_data_oram"/>
+      <var loc="f,136,49,136,72" name="offchip_oram_yummy_oram" dtype_id="1" vartype="logic" origName="offchip_oram_yummy_oram"/>
+      <var loc="f,137,49,137,72" name="oram_offchip_valid_oram" dtype_id="1" vartype="logic" origName="oram_offchip_valid_oram"/>
+      <var loc="f,138,36,138,58" name="oram_offchip_data_oram" dtype_id="7" vartype="logic" origName="oram_offchip_data_oram"/>
+      <var loc="f,140,49,140,65" name="ctap_oram_clk_en" dtype_id="1" vartype="logic" origName="ctap_oram_clk_en"/>
+      <var loc="f,141,49,141,66" name="ctap_oram_req_val" dtype_id="1" vartype="logic" origName="ctap_oram_req_val"/>
+      <var loc="f,142,29,142,47" name="ctap_oram_req_misc" dtype_id="6" vartype="logic" origName="ctap_oram_req_misc"/>
+      <var loc="f,143,30,143,48" name="oram_ctap_res_data" dtype_id="7" vartype="logic" origName="oram_ctap_res_data"/>
+      <var loc="f,144,49,144,67" name="tiles_jtag_ucb_val" dtype_id="1" vartype="logic" origName="tiles_jtag_ucb_val"/>
+      <var loc="f,145,36,145,55" name="tiles_jtag_ucb_data" dtype_id="6" vartype="logic" origName="tiles_jtag_ucb_data"/>
+      <var loc="f,146,49,146,67" name="jtag_tiles_ucb_val" dtype_id="1" vartype="logic" origName="jtag_tiles_ucb_val"/>
+      <var loc="f,147,36,147,55" name="jtag_tiles_ucb_data" dtype_id="6" vartype="logic" origName="jtag_tiles_ucb_data"/>
+      <var loc="f,148,49,148,66" name="ctap_clk_en_inter" dtype_id="8" vartype="logic" origName="ctap_clk_en_inter"/>
+      <var loc="f,149,9,149,27" name="tile0_jtag_ucb_val" dtype_id="1" vartype="logic" origName="tile0_jtag_ucb_val"/>
+      <var loc="f,150,14,150,33" name="tile0_jtag_ucb_data" dtype_id="6" vartype="logic" origName="tile0_jtag_ucb_data"/>
+      <var loc="f,151,6,151,24" name="tile1_jtag_ucb_val" dtype_id="1" vartype="logic" origName="tile1_jtag_ucb_val"/>
+      <var loc="f,152,14,152,33" name="tile1_jtag_ucb_data" dtype_id="6" vartype="logic" origName="tile1_jtag_ucb_data"/>
+      <var loc="f,153,15,153,39" name="tile_0_0_out_N_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_N_noc1_data"/>
+      <var loc="f,154,15,154,39" name="tile_0_0_out_S_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_S_noc1_data"/>
+      <var loc="f,155,15,155,39" name="tile_0_0_out_E_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_E_noc1_data"/>
+      <var loc="f,156,15,156,39" name="tile_0_0_out_W_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_W_noc1_data"/>
+      <var loc="f,157,6,157,31" name="tile_0_0_out_N_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc1_valid"/>
+      <var loc="f,158,6,158,31" name="tile_0_0_out_S_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc1_valid"/>
+      <var loc="f,159,6,159,31" name="tile_0_0_out_E_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc1_valid"/>
+      <var loc="f,160,6,160,31" name="tile_0_0_out_W_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc1_valid"/>
+      <var loc="f,161,6,161,31" name="tile_0_0_out_N_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc1_yummy"/>
+      <var loc="f,162,6,162,31" name="tile_0_0_out_S_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc1_yummy"/>
+      <var loc="f,163,6,163,31" name="tile_0_0_out_E_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc1_yummy"/>
+      <var loc="f,164,6,164,31" name="tile_0_0_out_W_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc1_yummy"/>
+      <var loc="f,165,15,165,39" name="tile_0_0_out_N_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_N_noc2_data"/>
+      <var loc="f,166,15,166,39" name="tile_0_0_out_S_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_S_noc2_data"/>
+      <var loc="f,167,15,167,39" name="tile_0_0_out_E_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_E_noc2_data"/>
+      <var loc="f,168,15,168,39" name="tile_0_0_out_W_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_W_noc2_data"/>
+      <var loc="f,169,6,169,31" name="tile_0_0_out_N_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc2_valid"/>
+      <var loc="f,170,6,170,31" name="tile_0_0_out_S_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc2_valid"/>
+      <var loc="f,171,6,171,31" name="tile_0_0_out_E_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc2_valid"/>
+      <var loc="f,172,6,172,31" name="tile_0_0_out_W_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc2_valid"/>
+      <var loc="f,173,6,173,31" name="tile_0_0_out_N_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc2_yummy"/>
+      <var loc="f,174,6,174,31" name="tile_0_0_out_S_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc2_yummy"/>
+      <var loc="f,175,6,175,31" name="tile_0_0_out_E_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc2_yummy"/>
+      <var loc="f,176,6,176,31" name="tile_0_0_out_W_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc2_yummy"/>
+      <var loc="f,177,15,177,39" name="tile_0_0_out_N_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_N_noc3_data"/>
+      <var loc="f,178,15,178,39" name="tile_0_0_out_S_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_S_noc3_data"/>
+      <var loc="f,179,15,179,39" name="tile_0_0_out_E_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_E_noc3_data"/>
+      <var loc="f,180,15,180,39" name="tile_0_0_out_W_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_0_out_W_noc3_data"/>
+      <var loc="f,181,6,181,31" name="tile_0_0_out_N_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc3_valid"/>
+      <var loc="f,182,6,182,31" name="tile_0_0_out_S_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc3_valid"/>
+      <var loc="f,183,6,183,31" name="tile_0_0_out_E_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc3_valid"/>
+      <var loc="f,184,6,184,31" name="tile_0_0_out_W_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc3_valid"/>
+      <var loc="f,185,6,185,31" name="tile_0_0_out_N_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_N_noc3_yummy"/>
+      <var loc="f,186,6,186,31" name="tile_0_0_out_S_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_S_noc3_yummy"/>
+      <var loc="f,187,6,187,31" name="tile_0_0_out_E_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_E_noc3_yummy"/>
+      <var loc="f,188,6,188,31" name="tile_0_0_out_W_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_0_out_W_noc3_yummy"/>
+      <var loc="f,189,15,189,39" name="tile_0_1_out_N_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_N_noc1_data"/>
+      <var loc="f,190,15,190,39" name="tile_0_1_out_S_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_S_noc1_data"/>
+      <var loc="f,191,15,191,39" name="tile_0_1_out_E_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_E_noc1_data"/>
+      <var loc="f,192,15,192,39" name="tile_0_1_out_W_noc1_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_W_noc1_data"/>
+      <var loc="f,193,6,193,31" name="tile_0_1_out_N_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc1_valid"/>
+      <var loc="f,194,6,194,31" name="tile_0_1_out_S_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc1_valid"/>
+      <var loc="f,195,6,195,31" name="tile_0_1_out_E_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc1_valid"/>
+      <var loc="f,196,6,196,31" name="tile_0_1_out_W_noc1_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc1_valid"/>
+      <var loc="f,197,6,197,31" name="tile_0_1_out_N_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc1_yummy"/>
+      <var loc="f,198,6,198,31" name="tile_0_1_out_S_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc1_yummy"/>
+      <var loc="f,199,6,199,31" name="tile_0_1_out_E_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc1_yummy"/>
+      <var loc="f,200,6,200,31" name="tile_0_1_out_W_noc1_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc1_yummy"/>
+      <var loc="f,201,15,201,39" name="tile_0_1_out_N_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_N_noc2_data"/>
+      <var loc="f,202,15,202,39" name="tile_0_1_out_S_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_S_noc2_data"/>
+      <var loc="f,203,15,203,39" name="tile_0_1_out_E_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_E_noc2_data"/>
+      <var loc="f,204,15,204,39" name="tile_0_1_out_W_noc2_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_W_noc2_data"/>
+      <var loc="f,205,6,205,31" name="tile_0_1_out_N_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc2_valid"/>
+      <var loc="f,206,6,206,31" name="tile_0_1_out_S_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc2_valid"/>
+      <var loc="f,207,6,207,31" name="tile_0_1_out_E_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc2_valid"/>
+      <var loc="f,208,6,208,31" name="tile_0_1_out_W_noc2_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc2_valid"/>
+      <var loc="f,209,6,209,31" name="tile_0_1_out_N_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc2_yummy"/>
+      <var loc="f,210,6,210,31" name="tile_0_1_out_S_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc2_yummy"/>
+      <var loc="f,211,6,211,31" name="tile_0_1_out_E_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc2_yummy"/>
+      <var loc="f,212,6,212,31" name="tile_0_1_out_W_noc2_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc2_yummy"/>
+      <var loc="f,213,15,213,39" name="tile_0_1_out_N_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_N_noc3_data"/>
+      <var loc="f,214,15,214,39" name="tile_0_1_out_S_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_S_noc3_data"/>
+      <var loc="f,215,15,215,39" name="tile_0_1_out_E_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_E_noc3_data"/>
+      <var loc="f,216,15,216,39" name="tile_0_1_out_W_noc3_data" dtype_id="7" vartype="logic" origName="tile_0_1_out_W_noc3_data"/>
+      <var loc="f,217,6,217,31" name="tile_0_1_out_N_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc3_valid"/>
+      <var loc="f,218,6,218,31" name="tile_0_1_out_S_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc3_valid"/>
+      <var loc="f,219,6,219,31" name="tile_0_1_out_E_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc3_valid"/>
+      <var loc="f,220,6,220,31" name="tile_0_1_out_W_noc3_valid" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc3_valid"/>
+      <var loc="f,221,6,221,31" name="tile_0_1_out_N_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_N_noc3_yummy"/>
+      <var loc="f,222,6,222,31" name="tile_0_1_out_S_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_S_noc3_yummy"/>
+      <var loc="f,223,6,223,31" name="tile_0_1_out_E_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_E_noc3_yummy"/>
+      <var loc="f,224,6,224,31" name="tile_0_1_out_W_noc3_yummy" dtype_id="1" vartype="logic" origName="tile_0_1_out_W_noc3_yummy"/>
+      <var loc="f,225,15,225,36" name="dummy_out_N_noc1_data" dtype_id="7" vartype="logic" origName="dummy_out_N_noc1_data">
+        <const loc="f,225,39,225,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,226,15,226,36" name="dummy_out_S_noc1_data" dtype_id="7" vartype="logic" origName="dummy_out_S_noc1_data">
+        <const loc="f,226,39,226,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,227,15,227,36" name="dummy_out_E_noc1_data" dtype_id="7" vartype="logic" origName="dummy_out_E_noc1_data">
+        <const loc="f,227,39,227,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,228,15,228,36" name="dummy_out_W_noc1_data" dtype_id="7" vartype="logic" origName="dummy_out_W_noc1_data">
+        <const loc="f,228,39,228,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,229,6,229,28" name="dummy_out_N_noc1_valid" dtype_id="1" vartype="logic" origName="dummy_out_N_noc1_valid">
+        <const loc="f,229,31,229,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,230,6,230,28" name="dummy_out_S_noc1_valid" dtype_id="1" vartype="logic" origName="dummy_out_S_noc1_valid">
+        <const loc="f,230,31,230,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,231,6,231,28" name="dummy_out_E_noc1_valid" dtype_id="1" vartype="logic" origName="dummy_out_E_noc1_valid">
+        <const loc="f,231,31,231,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,232,6,232,28" name="dummy_out_W_noc1_valid" dtype_id="1" vartype="logic" origName="dummy_out_W_noc1_valid">
+        <const loc="f,232,31,232,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,233,6,233,28" name="dummy_out_N_noc1_yummy" dtype_id="1" vartype="logic" origName="dummy_out_N_noc1_yummy">
+        <const loc="f,233,31,233,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,234,6,234,28" name="dummy_out_S_noc1_yummy" dtype_id="1" vartype="logic" origName="dummy_out_S_noc1_yummy">
+        <const loc="f,234,31,234,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,235,6,235,28" name="dummy_out_E_noc1_yummy" dtype_id="1" vartype="logic" origName="dummy_out_E_noc1_yummy">
+        <const loc="f,235,31,235,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,236,6,236,28" name="dummy_out_W_noc1_yummy" dtype_id="1" vartype="logic" origName="dummy_out_W_noc1_yummy">
+        <const loc="f,236,31,236,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,237,15,237,36" name="dummy_out_N_noc2_data" dtype_id="7" vartype="logic" origName="dummy_out_N_noc2_data">
+        <const loc="f,237,39,237,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,238,15,238,36" name="dummy_out_S_noc2_data" dtype_id="7" vartype="logic" origName="dummy_out_S_noc2_data">
+        <const loc="f,238,39,238,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,239,15,239,36" name="dummy_out_E_noc2_data" dtype_id="7" vartype="logic" origName="dummy_out_E_noc2_data">
+        <const loc="f,239,39,239,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,240,15,240,36" name="dummy_out_W_noc2_data" dtype_id="7" vartype="logic" origName="dummy_out_W_noc2_data">
+        <const loc="f,240,39,240,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,241,6,241,28" name="dummy_out_N_noc2_valid" dtype_id="1" vartype="logic" origName="dummy_out_N_noc2_valid">
+        <const loc="f,241,31,241,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,242,6,242,28" name="dummy_out_S_noc2_valid" dtype_id="1" vartype="logic" origName="dummy_out_S_noc2_valid">
+        <const loc="f,242,31,242,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,243,6,243,28" name="dummy_out_E_noc2_valid" dtype_id="1" vartype="logic" origName="dummy_out_E_noc2_valid">
+        <const loc="f,243,31,243,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,244,6,244,28" name="dummy_out_W_noc2_valid" dtype_id="1" vartype="logic" origName="dummy_out_W_noc2_valid">
+        <const loc="f,244,31,244,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,245,6,245,28" name="dummy_out_N_noc2_yummy" dtype_id="1" vartype="logic" origName="dummy_out_N_noc2_yummy">
+        <const loc="f,245,31,245,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,246,6,246,28" name="dummy_out_S_noc2_yummy" dtype_id="1" vartype="logic" origName="dummy_out_S_noc2_yummy">
+        <const loc="f,246,31,246,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,247,6,247,28" name="dummy_out_E_noc2_yummy" dtype_id="1" vartype="logic" origName="dummy_out_E_noc2_yummy">
+        <const loc="f,247,31,247,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,248,6,248,28" name="dummy_out_W_noc2_yummy" dtype_id="1" vartype="logic" origName="dummy_out_W_noc2_yummy">
+        <const loc="f,248,31,248,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,249,15,249,36" name="dummy_out_N_noc3_data" dtype_id="7" vartype="logic" origName="dummy_out_N_noc3_data">
+        <const loc="f,249,39,249,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,250,15,250,36" name="dummy_out_S_noc3_data" dtype_id="7" vartype="logic" origName="dummy_out_S_noc3_data">
+        <const loc="f,250,39,250,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,251,15,251,36" name="dummy_out_E_noc3_data" dtype_id="7" vartype="logic" origName="dummy_out_E_noc3_data">
+        <const loc="f,251,39,251,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,252,15,252,36" name="dummy_out_W_noc3_data" dtype_id="7" vartype="logic" origName="dummy_out_W_noc3_data">
+        <const loc="f,252,39,252,44" name="64&apos;h0" dtype_id="7"/>
+      </var>
+      <var loc="f,253,6,253,28" name="dummy_out_N_noc3_valid" dtype_id="1" vartype="logic" origName="dummy_out_N_noc3_valid">
+        <const loc="f,253,31,253,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,254,6,254,28" name="dummy_out_S_noc3_valid" dtype_id="1" vartype="logic" origName="dummy_out_S_noc3_valid">
+        <const loc="f,254,31,254,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,255,6,255,28" name="dummy_out_E_noc3_valid" dtype_id="1" vartype="logic" origName="dummy_out_E_noc3_valid">
+        <const loc="f,255,31,255,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,256,6,256,28" name="dummy_out_W_noc3_valid" dtype_id="1" vartype="logic" origName="dummy_out_W_noc3_valid">
+        <const loc="f,256,31,256,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,257,6,257,28" name="dummy_out_N_noc3_yummy" dtype_id="1" vartype="logic" origName="dummy_out_N_noc3_yummy">
+        <const loc="f,257,31,257,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,258,6,258,28" name="dummy_out_S_noc3_yummy" dtype_id="1" vartype="logic" origName="dummy_out_S_noc3_yummy">
+        <const loc="f,258,31,258,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,259,6,259,28" name="dummy_out_E_noc3_yummy" dtype_id="1" vartype="logic" origName="dummy_out_E_noc3_yummy">
+        <const loc="f,259,31,259,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <var loc="f,260,6,260,28" name="dummy_out_W_noc3_yummy" dtype_id="1" vartype="logic" origName="dummy_out_W_noc3_yummy">
+        <const loc="f,260,31,260,35" name="1&apos;h0" dtype_id="1"/>
+      </var>
+      <always loc="f,270,4,270,10">
+        <sentree loc="f,270,11,270,12">
+          <senitem loc="f,270,14,270,21" edgeType="POS">
+            <varref loc="f,270,22,270,31" name="clk_muxed" dtype_id="1"/>
+          </senitem>
+        </sentree>
+        <assigndly loc="f,271,26,271,28" dtype_id="1">
+          <varref loc="f,271,29,271,45" name="rst_n_inter_sync" dtype_id="1"/>
+          <varref loc="f,271,7,271,25" name="rst_n_inter_sync_f" dtype_id="1"/>
+        </assigndly>
+      </always>
+      <always loc="f,272,4,272,10">
+        <sentree loc="f,272,11,272,12">
+          <senitem loc="f,272,14,272,21" edgeType="POS">
+            <varref loc="f,272,22,272,34" name="io_clk_inter" dtype_id="1"/>
+          </senitem>
+        </sentree>
+        <assigndly loc="f,273,33,273,35" dtype_id="1">
+          <varref loc="f,273,36,273,59" name="io_clk_rst_n_inter_sync" dtype_id="1"/>
+          <varref loc="f,273,7,273,32" name="io_clk_rst_n_inter_sync_f" dtype_id="1"/>
+        </assigndly>
+      </always>
+      <always loc="f,274,4,274,10">
+        <sentree loc="f,274,11,274,12">
+          <senitem loc="f,274,13,274,20" edgeType="POS">
+            <varref loc="f,274,21,274,33" name="io_clk_inter" dtype_id="1"/>
+          </senitem>
+        </sentree>
+        <begin loc="f,275,4,275,9">
+          <if loc="f,276,8,276,10">
+            <varref loc="f,276,12,276,30" name="rst_n_inter_sync_f" dtype_id="1"/>
+            <begin>
+              <begin loc="f,283,8,283,13">
+                <assigndly loc="f,284,39,284,41" dtype_id="4">
+                  <varref loc="f,284,42,284,62" name="intf_chip_data_inter" dtype_id="4"/>
+                  <varref loc="f,284,12,284,38" name="intf_chip_data_inter_buf_f" dtype_id="4"/>
+                </assigndly>
+                <assigndly loc="f,285,42,285,44" dtype_id="3">
+                  <varref loc="f,285,45,285,68" name="intf_chip_channel_inter" dtype_id="3"/>
+                  <varref loc="f,285,12,285,41" name="intf_chip_channel_inter_buf_f" dtype_id="3"/>
+                </assigndly>
+                <assigndly loc="f,286,46,286,48" dtype_id="5">
+                  <varref loc="f,286,49,286,76" name="chip_intf_credit_back_inter" dtype_id="5"/>
+                  <varref loc="f,286,12,286,45" name="chip_intf_credit_back_inter_buf_f" dtype_id="5"/>
+                </assigndly>
+              </begin>
+            </begin>
+            <begin>
+              <begin loc="f,277,8,277,13">
+                <assigndly loc="f,278,39,278,41" dtype_id="4">
+                  <const loc="f,278,42,278,43" name="32&apos;sh0" dtype_id="9"/>
+                  <varref loc="f,278,12,278,38" name="intf_chip_data_inter_buf_f" dtype_id="4"/>
+                </assigndly>
+                <assigndly loc="f,279,42,279,44" dtype_id="3">
+                  <const loc="f,279,45,279,46" name="2&apos;h0" dtype_id="3"/>
+                  <varref loc="f,279,12,279,41" name="intf_chip_channel_inter_buf_f" dtype_id="3"/>
+                </assigndly>
+                <assigndly loc="f,280,46,280,48" dtype_id="5">
+                  <const loc="f,280,49,280,50" name="3&apos;h0" dtype_id="5"/>
+                  <varref loc="f,280,12,280,45" name="chip_intf_credit_back_inter_buf_f" dtype_id="5"/>
+                </assigndly>
+              </begin>
+            </begin>
+          </if>
+        </begin>
+      </always>
+      <always loc="f,313,4,313,10">
+        <begin loc="f,314,4,314,9">
+          <assign loc="f,315,25,315,26" dtype_id="1">
+            <varref loc="f,315,27,315,42" name="tile_0_0_out_W_noc2_valid" dtype_id="1"/>
+            <varref loc="f,315,6,315,24" name="oram_offchip_valid" dtype_id="1"/>
+          </assign>
+          <assign loc="f,316,24,316,25" dtype_id="7">
+            <varref loc="f,316,26,316,40" name="tile_0_0_out_W_noc2_data" dtype_id="7"/>
+            <varref loc="f,316,6,316,23" name="oram_offchip_data" dtype_id="7"/>
+          </assign>
+          <assign loc="f,317,22,317,23" dtype_id="1">
+            <varref loc="f,317,24,317,42" name="processor_offchip_noc2_yummy" dtype_id="1"/>
+            <varref loc="f,317,6,317,21" name="proc_oram_yummy" dtype_id="1"/>
+          </assign>
+          <assign loc="f,318,22,318,23" dtype_id="1">
+            <varref loc="f,318,24,318,42" name="offchip_processor_noc3_valid" dtype_id="1"/>
+            <varref loc="f,318,6,318,21" name="oram_proc_valid" dtype_id="1"/>
+          </assign>
+          <assign loc="f,319,21,319,22" dtype_id="7">
+            <varref loc="f,319,23,319,40" name="offchip_processor_noc3_data" dtype_id="7"/>
+            <varref loc="f,319,6,319,20" name="oram_proc_data" dtype_id="7"/>
+          </assign>
+          <assign loc="f,320,25,320,26" dtype_id="1">
+            <varref loc="f,320,27,320,42" name="tile_0_0_out_W_noc3_yummy" dtype_id="1"/>
+            <varref loc="f,320,6,320,24" name="offchip_oram_yummy" dtype_id="1"/>
+          </assign>
+          <if loc="f,321,6,321,8">
+            <varref loc="f,321,10,321,23" name="oram_on_inter" dtype_id="1"/>
+            <begin>
+              <begin loc="f,322,6,322,11">
+                <assign loc="f,323,27,323,28" dtype_id="1">
+                  <varref loc="f,323,29,323,52" name="oram_offchip_valid_oram" dtype_id="1"/>
+                  <varref loc="f,323,8,323,26" name="oram_offchip_valid" dtype_id="1"/>
+                </assign>
+                <assign loc="f,324,26,324,27" dtype_id="7">
+                  <varref loc="f,324,28,324,50" name="oram_offchip_data_oram" dtype_id="7"/>
+                  <varref loc="f,324,8,324,25" name="oram_offchip_data" dtype_id="7"/>
+                </assign>
+                <assign loc="f,325,24,325,25" dtype_id="1">
+                  <varref loc="f,325,26,325,46" name="proc_oram_yummy_oram" dtype_id="1"/>
+                  <varref loc="f,325,8,325,23" name="proc_oram_yummy" dtype_id="1"/>
+                </assign>
+                <assign loc="f,326,24,326,25" dtype_id="1">
+                  <varref loc="f,326,26,326,46" name="oram_proc_valid_oram" dtype_id="1"/>
+                  <varref loc="f,326,8,326,23" name="oram_proc_valid" dtype_id="1"/>
+                </assign>
+                <assign loc="f,327,23,327,24" dtype_id="7">
+                  <varref loc="f,327,25,327,44" name="oram_proc_data_oram" dtype_id="7"/>
+                  <varref loc="f,327,8,327,22" name="oram_proc_data" dtype_id="7"/>
+                </assign>
+                <assign loc="f,328,27,328,28" dtype_id="1">
+                  <varref loc="f,328,29,328,52" name="offchip_oram_yummy_oram" dtype_id="1"/>
+                  <varref loc="f,328,8,328,26" name="offchip_oram_yummy" dtype_id="1"/>
+                </assign>
+              </begin>
+            </begin>
+          </if>
+        </begin>
+      </always>
+      <instance loc="f,333,8,333,16" name="oci_inst" defName="OCI" origName="oci_inst">
+        <port loc="f,334,5,334,9" name="slew" direction="in" portIndex="1">
+          <varref loc="f,334,26,334,30" name="slew" dtype_id="1"/>
+        </port>
+        <port loc="f,335,5,335,12" name="impsel1" direction="in" portIndex="2">
+          <varref loc="f,335,29,335,36" name="impsel1" dtype_id="1"/>
+        </port>
+        <port loc="f,336,5,336,12" name="impsel2" direction="in" portIndex="3">
+          <varref loc="f,336,29,336,36" name="impsel2" dtype_id="1"/>
+        </port>
+        <port loc="f,337,5,337,17" name="core_ref_clk" direction="in" portIndex="4">
+          <varref loc="f,337,29,337,41" name="core_ref_clk" dtype_id="1"/>
+        </port>
+        <port loc="f,338,5,338,11" name="io_clk" direction="in" portIndex="5">
+          <varref loc="f,338,29,338,35" name="io_clk" dtype_id="1"/>
+        </port>
+        <port loc="f,339,5,339,10" name="rst_n" direction="in" portIndex="6">
+          <varref loc="f,339,29,339,34" name="rst_n" dtype_id="1"/>
+        </port>
+        <port loc="f,340,5,340,14" name="pll_rst_n" direction="in" portIndex="7">
+          <varref loc="f,340,29,340,38" name="pll_rst_n" dtype_id="1"/>
+        </port>
+        <port loc="f,341,5,341,15" name="pll_rangea" direction="in" portIndex="8">
+          <varref loc="f,341,29,341,39" name="pll_rangea" dtype_id="2"/>
+        </port>
+        <port loc="f,342,5,342,16" name="clk_mux_sel" direction="in" portIndex="9">
+          <varref loc="f,342,32,342,43" name="clk_mux_sel" dtype_id="3"/>
+        </port>
+        <port loc="f,343,5,343,11" name="clk_en" direction="in" portIndex="10">
+          <varref loc="f,343,29,343,35" name="clk_en" dtype_id="1"/>
+        </port>
+        <port loc="f,344,5,344,15" name="pll_bypass" direction="in" portIndex="11">
+          <varref loc="f,344,29,344,39" name="pll_bypass" dtype_id="1"/>
+        </port>
+        <port loc="f,345,5,345,14" name="async_mux" direction="in" portIndex="12">
+          <varref loc="f,345,29,345,38" name="async_mux" dtype_id="1"/>
+        </port>
+        <port loc="f,346,5,346,12" name="oram_on" direction="in" portIndex="13">
+          <varref loc="f,346,29,346,36" name="oram_on" dtype_id="1"/>
+        </port>
+        <port loc="f,347,5,347,21" name="oram_traffic_gen" direction="in" portIndex="14">
+          <varref loc="f,347,29,347,45" name="oram_traffic_gen" dtype_id="1"/>
+        </port>
+        <port loc="f,348,5,348,19" name="oram_dummy_gen" direction="in" portIndex="15">
+          <varref loc="f,348,32,348,46" name="oram_dummy_gen" dtype_id="1"/>
+        </port>
+        <port loc="f,349,5,349,13" name="pll_lock" direction="out" portIndex="16">
+          <varref loc="f,349,29,349,37" name="pll_lock" dtype_id="1"/>
+        </port>
+        <port loc="f,350,5,350,13" name="jtag_clk" direction="in" portIndex="17">
+          <varref loc="f,350,29,350,37" name="jtag_clk" dtype_id="1"/>
+        </port>
+        <port loc="f,351,5,351,15" name="jtag_rst_l" direction="in" portIndex="18">
+          <varref loc="f,351,29,351,39" name="jtag_rst_l" dtype_id="1"/>
+        </port>
+        <port loc="f,352,5,352,17" name="jtag_modesel" direction="in" portIndex="19">
+          <varref loc="f,352,29,352,41" name="jtag_modesel" dtype_id="1"/>
+        </port>
+        <port loc="f,353,5,353,16" name="jtag_datain" direction="in" portIndex="20">
+          <varref loc="f,353,32,353,43" name="jtag_datain" dtype_id="1"/>
+        </port>
+        <port loc="f,354,5,354,17" name="jtag_dataout" direction="out" portIndex="21">
+          <varref loc="f,354,29,354,41" name="jtag_dataout" dtype_id="1"/>
+        </port>
+        <port loc="f,355,5,355,19" name="intf_chip_data" direction="in" portIndex="22">
+          <varref loc="f,355,32,355,46" name="intf_chip_data" dtype_id="4"/>
+        </port>
+        <port loc="f,356,5,356,22" name="intf_chip_channel" direction="in" portIndex="23">
+          <varref loc="f,356,32,356,49" name="intf_chip_channel" dtype_id="3"/>
+        </port>
+        <port loc="f,357,5,357,26" name="intf_chip_credit_back" direction="out" portIndex="24">
+          <varref loc="f,357,32,357,53" name="intf_chip_credit_back" dtype_id="5"/>
+        </port>
+        <port loc="f,358,5,358,19" name="chip_intf_data" direction="out" portIndex="25">
+          <varref loc="f,358,32,358,46" name="chip_intf_data" dtype_id="4"/>
+        </port>
+        <port loc="f,359,5,359,22" name="chip_intf_channel" direction="out" portIndex="26">
+          <varref loc="f,359,32,359,49" name="chip_intf_channel" dtype_id="3"/>
+        </port>
+        <port loc="f,360,5,360,26" name="chip_intf_credit_back" direction="in" portIndex="27">
+          <varref loc="f,360,32,360,53" name="chip_intf_credit_back" dtype_id="5"/>
+        </port>
+        <port loc="f,361,5,361,23" name="core_ref_clk_inter" direction="out" portIndex="28">
+          <varref loc="f,361,32,361,50" name="core_ref_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,362,5,362,17" name="io_clk_inter" direction="out" portIndex="29">
+          <varref loc="f,362,29,362,41" name="io_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,363,5,363,16" name="rst_n_inter" direction="out" portIndex="30">
+          <varref loc="f,363,32,363,43" name="rst_n_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,364,5,364,20" name="pll_rst_n_inter" direction="out" portIndex="31">
+          <varref loc="f,364,32,364,47" name="pll_rst_n_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,365,5,365,21" name="pll_rangea_inter" direction="out" portIndex="32">
+          <varref loc="f,365,29,365,45" name="pll_rangea_inter" dtype_id="2"/>
+        </port>
+        <port loc="f,366,5,366,22" name="clk_mux_sel_inter" direction="out" portIndex="33">
+          <varref loc="f,366,32,366,49" name="clk_mux_sel_inter" dtype_id="3"/>
+        </port>
+        <port loc="f,367,5,367,17" name="clk_en_inter" direction="out" portIndex="34">
+          <varref loc="f,367,29,367,41" name="clk_en_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,368,5,368,21" name="pll_bypass_inter" direction="out" portIndex="35">
+          <varref loc="f,368,29,368,45" name="pll_bypass_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,369,5,369,20" name="async_mux_inter" direction="out" portIndex="36">
+          <varref loc="f,369,32,369,47" name="async_mux_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,370,5,370,18" name="oram_on_inter" direction="out" portIndex="37">
+          <varref loc="f,370,29,370,42" name="oram_on_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,371,5,371,27" name="oram_traffic_gen_inter" direction="out" portIndex="38">
+          <varref loc="f,371,32,371,54" name="oram_traffic_gen_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,372,5,372,25" name="oram_dummy_gen_inter" direction="out" portIndex="39">
+          <varref loc="f,372,32,372,52" name="oram_dummy_gen_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,373,5,373,19" name="pll_lock_inter" direction="in" portIndex="40">
+          <varref loc="f,373,32,373,46" name="pll_lock_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,374,5,374,19" name="jtag_clk_inter" direction="out" portIndex="41">
+          <varref loc="f,374,32,374,46" name="jtag_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,375,5,375,21" name="jtag_rst_l_inter" direction="out" portIndex="42">
+          <varref loc="f,375,29,375,45" name="jtag_rst_l_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,376,5,376,23" name="jtag_modesel_inter" direction="out" portIndex="43">
+          <varref loc="f,376,32,376,50" name="jtag_modesel_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,377,5,377,22" name="jtag_datain_inter" direction="out" portIndex="44">
+          <varref loc="f,377,32,377,49" name="jtag_datain_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,378,5,378,23" name="jtag_dataout_inter" direction="in" portIndex="45">
+          <varref loc="f,378,32,378,50" name="jtag_dataout_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,379,5,379,25" name="intf_chip_data_inter" direction="out" portIndex="46">
+          <varref loc="f,379,32,379,52" name="intf_chip_data_inter" dtype_id="4"/>
+        </port>
+        <port loc="f,380,5,380,28" name="intf_chip_channel_inter" direction="out" portIndex="47">
+          <varref loc="f,380,35,380,58" name="intf_chip_channel_inter" dtype_id="3"/>
+        </port>
+        <port loc="f,381,5,381,32" name="intf_chip_credit_back_inter" direction="in" portIndex="48">
+          <varref loc="f,381,35,381,62" name="intf_chip_credit_back_inter" dtype_id="5"/>
+        </port>
+        <port loc="f,382,5,382,25" name="chip_intf_data_inter" direction="in" portIndex="49">
+          <varref loc="f,382,32,382,52" name="chip_intf_data_inter" dtype_id="4"/>
+        </port>
+        <port loc="f,383,5,383,28" name="chip_intf_channel_inter" direction="in" portIndex="50">
+          <varref loc="f,383,35,383,58" name="chip_intf_channel_inter" dtype_id="3"/>
+        </port>
+        <port loc="f,384,5,384,32" name="chip_intf_credit_back_inter" direction="out" portIndex="51">
+          <varref loc="f,384,35,384,62" name="chip_intf_credit_back_inter" dtype_id="5"/>
+        </port>
+      </instance>
+      <instance loc="f,385,19,385,36" name="ref_clk_converter" defName="clk_se_to_diff" origName="ref_clk_converter">
+        <port loc="f,386,9,386,15" name="clk_se" direction="in" portIndex="1">
+          <varref loc="f,386,18,386,36" name="core_ref_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,387,9,387,14" name="clk_p" direction="out" portIndex="2">
+          <varref loc="f,387,18,387,38" name="core_ref_clk_inter_t" dtype_id="1"/>
+        </port>
+        <port loc="f,388,9,388,14" name="clk_n" direction="out" portIndex="3">
+          <varref loc="f,388,18,388,38" name="core_ref_clk_inter_c" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,390,12,390,21" name="clock_mux" defName="clk_mux" origName="clock_mux">
+        <port loc="f,391,9,391,15" name="clk0_p" direction="in" portIndex="1">
+          <varref loc="f,391,16,391,36" name="core_ref_clk_inter_t" dtype_id="1"/>
+        </port>
+        <port loc="f,392,9,392,15" name="clk0_n" direction="in" portIndex="2">
+          <varref loc="f,392,16,392,36" name="core_ref_clk_inter_c" dtype_id="1"/>
+        </port>
+        <port loc="f,393,9,393,15" name="clk1_p" direction="in" portIndex="3">
+          <const loc="f,393,16,393,20" name="1&apos;h1" dtype_id="1"/>
+        </port>
+        <port loc="f,394,9,394,15" name="clk1_n" direction="in" portIndex="4">
+          <const loc="f,394,16,394,20" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,395,9,395,13" name="clk2" direction="in" portIndex="5">
+          <varref loc="f,395,14,395,21" name="pll_clk" dtype_id="1"/>
+        </port>
+        <port loc="f,396,9,396,12" name="sel" direction="in" portIndex="6">
+          <varref loc="f,396,13,396,30" name="clk_mux_sel_inter" dtype_id="3"/>
+        </port>
+        <port loc="f,397,9,397,18" name="clk_muxed" direction="out" portIndex="7">
+          <varref loc="f,397,19,397,28" name="clk_muxed" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,399,12,399,19" name="pll_top" defName="pll_top" origName="pll_top">
+        <port loc="f,400,8,400,18" name="clk_locked" direction="out" portIndex="1">
+          <varref loc="f,400,19,400,33" name="pll_lock_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,401,8,401,15" name="clk_out" direction="out" portIndex="2">
+          <varref loc="f,401,16,401,23" name="pll_clk" dtype_id="1"/>
+        </port>
+        <port loc="f,402,8,402,14" name="rangeA" direction="in" portIndex="3">
+          <varref loc="f,402,15,402,31" name="pll_rangea_inter" dtype_id="2"/>
+        </port>
+        <port loc="f,403,8,403,17" name="bypass_en" direction="in" portIndex="4">
+          <varref loc="f,403,18,403,34" name="pll_bypass_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,404,8,404,15" name="ref_clk" direction="in" portIndex="5">
+          <varref loc="f,404,16,404,34" name="core_ref_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,405,8,405,11" name="rst" direction="in" portIndex="6">
+          <not loc="f,405,12,405,13" dtype_id="1">
+            <varref loc="f,405,13,405,28" name="pll_rst_n_inter" dtype_id="1"/>
+          </not>
+        </port>
+      </instance>
+      <instance loc="f,407,17,407,25" name="rst_sync" defName="synchronizer" origName="rst_sync">
+        <port loc="f,408,8,408,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,408,12,408,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,409,8,409,19" name="presyncdata" direction="in" portIndex="2">
+          <varref loc="f,409,20,409,31" name="rst_n_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,410,8,410,16" name="syncdata" direction="out" portIndex="3">
+          <varref loc="f,410,17,410,33" name="rst_n_inter_sync" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,412,17,412,32" name="io_clk_rst_sync" defName="synchronizer" origName="io_clk_rst_sync">
+        <port loc="f,413,8,413,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,413,12,413,24" name="io_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,414,8,414,19" name="presyncdata" direction="in" portIndex="2">
+          <varref loc="f,414,20,414,31" name="rst_n_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,415,8,415,16" name="syncdata" direction="out" portIndex="3">
+          <varref loc="f,415,17,415,40" name="io_clk_rst_n_inter_sync" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,417,17,417,30" name="jtag_rst_sync" defName="synchronizer" origName="jtag_rst_sync">
+        <port loc="f,418,8,418,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,418,12,418,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,419,8,419,19" name="presyncdata" direction="in" portIndex="2">
+          <varref loc="f,419,20,419,36" name="jtag_rst_l_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,420,8,420,16" name="syncdata" direction="out" portIndex="3">
+          <varref loc="f,420,17,420,38" name="jtag_rst_l_inter_sync" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,422,16,422,25" name="chip_intf" defName="chip_bridge" origName="chip_intf">
+        <port loc="f,423,9,423,14" name="rst_n" direction="in" portIndex="1">
+          <varref loc="f,423,33,423,51" name="rst_n_inter_sync_f" dtype_id="1"/>
+        </port>
+        <port loc="f,424,9,424,17" name="chip_clk" direction="in" portIndex="2">
+          <varref loc="f,424,33,424,42" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,425,9,425,20" name="intcnct_clk" direction="in" portIndex="3">
+          <varref loc="f,425,33,425,45" name="io_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,426,9,426,18" name="async_mux" direction="in" portIndex="4">
+          <varref loc="f,426,33,426,48" name="async_mux_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,427,9,427,22" name="network_out_1" direction="in" portIndex="5">
+          <varref loc="f,427,33,427,52" name="chip_intf_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,428,9,428,22" name="network_out_2" direction="in" portIndex="6">
+          <varref loc="f,428,33,428,52" name="chip_intf_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,429,9,429,22" name="network_out_3" direction="in" portIndex="7">
+          <varref loc="f,429,33,429,52" name="chip_intf_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,430,9,430,23" name="data_out_val_1" direction="in" portIndex="8">
+          <varref loc="f,430,33,430,53" name="chip_intf_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,431,9,431,23" name="data_out_val_2" direction="in" portIndex="9">
+          <varref loc="f,431,33,431,53" name="chip_intf_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,432,9,432,23" name="data_out_val_3" direction="in" portIndex="10">
+          <varref loc="f,432,33,432,53" name="chip_intf_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,433,9,433,23" name="data_out_rdy_1" direction="out" portIndex="11">
+          <varref loc="f,433,33,433,51" name="chip_intf_noc1_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,434,9,434,23" name="data_out_rdy_2" direction="out" portIndex="12">
+          <varref loc="f,434,33,434,51" name="chip_intf_noc2_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,435,9,435,23" name="data_out_rdy_3" direction="out" portIndex="13">
+          <varref loc="f,435,33,435,51" name="chip_intf_noc3_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,436,9,436,24" name="intcnct_data_in" direction="in" portIndex="14">
+          <varref loc="f,436,33,436,59" name="intf_chip_data_inter_buf_f" dtype_id="4"/>
+        </port>
+        <port loc="f,437,9,437,27" name="intcnct_channel_in" direction="in" portIndex="15">
+          <varref loc="f,437,33,437,62" name="intf_chip_channel_inter_buf_f" dtype_id="3"/>
+        </port>
+        <port loc="f,438,9,438,31" name="intcnct_credit_back_in" direction="out" portIndex="16">
+          <varref loc="f,438,33,438,60" name="intf_chip_credit_back_inter" dtype_id="5"/>
+        </port>
+        <port loc="f,439,9,439,21" name="network_in_1" direction="out" portIndex="17">
+          <varref loc="f,439,33,439,52" name="intf_chip_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,440,9,440,21" name="network_in_2" direction="out" portIndex="18">
+          <varref loc="f,440,33,440,52" name="intf_chip_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,441,9,441,21" name="network_in_3" direction="out" portIndex="19">
+          <varref loc="f,441,33,441,52" name="intf_chip_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,442,9,442,22" name="data_in_val_1" direction="out" portIndex="20">
+          <varref loc="f,442,33,442,53" name="intf_chip_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,443,9,443,22" name="data_in_val_2" direction="out" portIndex="21">
+          <varref loc="f,443,33,443,53" name="intf_chip_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,444,9,444,22" name="data_in_val_3" direction="out" portIndex="22">
+          <varref loc="f,444,33,444,53" name="intf_chip_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,445,9,445,22" name="data_in_rdy_1" direction="in" portIndex="23">
+          <varref loc="f,445,33,445,51" name="intf_chip_noc1_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,446,9,446,22" name="data_in_rdy_2" direction="in" portIndex="24">
+          <varref loc="f,446,33,446,51" name="intf_chip_noc2_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,447,9,447,22" name="data_in_rdy_3" direction="in" portIndex="25">
+          <varref loc="f,447,33,447,51" name="intf_chip_noc3_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,448,9,448,25" name="intcnct_data_out" direction="out" portIndex="26">
+          <varref loc="f,448,33,448,53" name="chip_intf_data_inter" dtype_id="4"/>
+        </port>
+        <port loc="f,449,9,449,28" name="intcnct_channel_out" direction="out" portIndex="27">
+          <varref loc="f,449,33,449,56" name="chip_intf_channel_inter" dtype_id="3"/>
+        </port>
+        <port loc="f,450,9,450,32" name="intcnct_credit_back_out" direction="in" portIndex="28">
+          <varref loc="f,450,33,450,66" name="chip_intf_credit_back_inter_buf_f" dtype_id="5"/>
+        </port>
+      </instance>
+      <instance loc="f,452,29,452,52" name="chip_from_intf_noc1_v2c" defName="valrdy_to_credit" origName="chip_from_intf_noc1_v2c">
+        <port loc="f,453,8,453,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,453,12,453,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,454,8,454,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,454,14,454,15" dtype_id="1">
+            <varref loc="f,454,15,454,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,455,8,455,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,455,16,455,35" name="intf_chip_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,456,8,456,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,456,17,456,37" name="intf_chip_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,457,8,457,16" name="ready_in" direction="out" portIndex="5">
+          <varref loc="f,457,17,457,35" name="intf_chip_noc1_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,458,8,458,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,458,17,458,44" name="offchip_processor_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,459,8,459,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,459,18,459,46" name="offchip_processor_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,460,8,460,17" name="yummy_out" direction="in" portIndex="8">
+          <varref loc="f,460,18,460,46" name="tile_0_0_out_W_noc1_yummy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,462,21,462,42" name="chip_to_intf_noc1_c2v" defName="credit_to_valrdy" origName="chip_to_intf_noc1_c2v">
+        <port loc="f,463,8,463,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,463,12,463,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,464,8,464,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,464,14,464,15" dtype_id="1">
+            <varref loc="f,464,15,464,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,465,8,465,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,465,16,465,43" name="tile_0_0_out_W_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,466,8,466,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,466,17,466,45" name="tile_0_0_out_W_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,467,8,467,16" name="yummy_in" direction="out" portIndex="5">
+          <varref loc="f,467,17,467,45" name="processor_offchip_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,468,8,468,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,468,17,468,36" name="chip_intf_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,469,8,469,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,469,18,469,38" name="chip_intf_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,470,8,470,17" name="ready_out" direction="in" portIndex="8">
+          <varref loc="f,470,18,470,36" name="chip_intf_noc1_rdy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,472,29,472,52" name="chip_from_intf_noc2_v2c" defName="valrdy_to_credit" origName="chip_from_intf_noc2_v2c">
+        <port loc="f,473,8,473,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,473,12,473,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,474,8,474,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,474,14,474,15" dtype_id="1">
+            <varref loc="f,474,15,474,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,475,8,475,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,475,16,475,35" name="intf_chip_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,476,8,476,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,476,17,476,37" name="intf_chip_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,477,8,477,16" name="ready_in" direction="out" portIndex="5">
+          <varref loc="f,477,17,477,35" name="intf_chip_noc2_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,478,8,478,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,478,17,478,44" name="offchip_processor_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,479,8,479,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,479,18,479,46" name="offchip_processor_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,480,8,480,17" name="yummy_out" direction="in" portIndex="8">
+          <varref loc="f,480,18,480,46" name="tile_0_0_out_W_noc2_yummy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,482,21,482,42" name="chip_to_intf_noc2_c2v" defName="credit_to_valrdy" origName="chip_to_intf_noc2_c2v">
+        <port loc="f,483,8,483,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,483,12,483,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,484,8,484,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,484,14,484,15" dtype_id="1">
+            <varref loc="f,484,15,484,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,485,8,485,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,485,16,485,43" name="oram_offchip_data" dtype_id="7"/>
+        </port>
+        <port loc="f,486,8,486,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,486,17,486,45" name="oram_offchip_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,487,8,487,16" name="yummy_in" direction="out" portIndex="5">
+          <varref loc="f,487,17,487,45" name="processor_offchip_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,488,8,488,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,488,17,488,36" name="chip_intf_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,489,8,489,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,489,18,489,38" name="chip_intf_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,490,8,490,17" name="ready_out" direction="in" portIndex="8">
+          <varref loc="f,490,18,490,36" name="chip_intf_noc2_rdy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,492,29,492,52" name="chip_from_intf_noc3_v2c" defName="valrdy_to_credit" origName="chip_from_intf_noc3_v2c">
+        <port loc="f,493,8,493,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,493,12,493,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,494,8,494,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,494,14,494,15" dtype_id="1">
+            <varref loc="f,494,15,494,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,495,8,495,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,495,16,495,35" name="intf_chip_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,496,8,496,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,496,17,496,37" name="intf_chip_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,497,8,497,16" name="ready_in" direction="out" portIndex="5">
+          <varref loc="f,497,17,497,35" name="intf_chip_noc3_rdy" dtype_id="1"/>
+        </port>
+        <port loc="f,498,8,498,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,498,17,498,44" name="offchip_processor_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,499,8,499,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,499,18,499,46" name="offchip_processor_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,500,8,500,17" name="yummy_out" direction="in" portIndex="8">
+          <varref loc="f,500,18,500,46" name="offchip_oram_yummy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,502,21,502,42" name="chip_to_intf_noc3_c2v" defName="credit_to_valrdy" origName="chip_to_intf_noc3_c2v">
+        <port loc="f,503,8,503,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,503,12,503,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,504,8,504,13" name="reset" direction="in" portIndex="2">
+          <not loc="f,504,14,504,15" dtype_id="1">
+            <varref loc="f,504,15,504,33" name="rst_n_inter_sync_f" dtype_id="1"/>
+          </not>
+        </port>
+        <port loc="f,505,8,505,15" name="data_in" direction="in" portIndex="3">
+          <varref loc="f,505,16,505,43" name="tile_0_0_out_W_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,506,8,506,16" name="valid_in" direction="in" portIndex="4">
+          <varref loc="f,506,17,506,45" name="tile_0_0_out_W_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,507,8,507,16" name="yummy_in" direction="out" portIndex="5">
+          <varref loc="f,507,17,507,45" name="processor_offchip_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,508,8,508,16" name="data_out" direction="out" portIndex="6">
+          <varref loc="f,508,17,508,36" name="chip_intf_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,509,8,509,17" name="valid_out" direction="out" portIndex="7">
+          <varref loc="f,509,18,509,38" name="chip_intf_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,510,8,510,17" name="ready_out" direction="in" portIndex="8">
+          <varref loc="f,510,18,510,36" name="chip_intf_noc3_rdy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,512,9,512,18" name="jtag_port" defName="jtag" origName="jtag_port">
+        <port loc="f,513,8,513,11" name="clk" direction="in" portIndex="1">
+          <varref loc="f,513,12,513,21" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,514,8,514,13" name="rst_n" direction="in" portIndex="2">
+          <varref loc="f,514,14,514,32" name="rst_n_inter_sync_f" dtype_id="1"/>
+        </port>
+        <port loc="f,515,8,515,16" name="jtag_clk" direction="in" portIndex="3">
+          <varref loc="f,515,17,515,31" name="jtag_clk_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,516,8,516,18" name="jtag_rst_l" direction="in" portIndex="4">
+          <varref loc="f,516,19,516,40" name="jtag_rst_l_inter_sync" dtype_id="1"/>
+        </port>
+        <port loc="f,517,8,517,20" name="jtag_modesel" direction="in" portIndex="5">
+          <varref loc="f,517,21,517,39" name="jtag_modesel_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,518,8,518,19" name="jtag_datain" direction="in" portIndex="6">
+          <varref loc="f,518,20,518,37" name="jtag_datain_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,519,8,519,20" name="jtag_dataout" direction="out" portIndex="7">
+          <varref loc="f,519,21,519,39" name="jtag_dataout_inter" dtype_id="1"/>
+        </port>
+        <port loc="f,520,8,520,23" name="jtag_dataout_en" direction="out" portIndex="8"/>
+        <port loc="f,521,8,521,26" name="jtag_tiles_ucb_val" direction="out" portIndex="9">
+          <varref loc="f,521,27,521,45" name="jtag_tiles_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,522,8,522,27" name="jtag_tiles_ucb_data" direction="out" portIndex="10">
+          <varref loc="f,522,28,522,47" name="jtag_tiles_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,523,8,523,26" name="tiles_jtag_ucb_val" direction="in" portIndex="11">
+          <varref loc="f,523,27,523,45" name="tiles_jtag_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,524,8,524,27" name="tiles_jtag_ucb_data" direction="in" portIndex="12">
+          <varref loc="f,524,28,524,47" name="tiles_jtag_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,525,8,525,25" name="ctap_oram_req_val" direction="out" portIndex="13">
+          <varref loc="f,525,26,525,43" name="ctap_oram_req_val" dtype_id="1"/>
+        </port>
+        <port loc="f,526,8,526,26" name="ctap_oram_req_misc" direction="out" portIndex="14">
+          <varref loc="f,526,27,526,45" name="ctap_oram_req_misc" dtype_id="6"/>
+        </port>
+        <port loc="f,527,8,527,26" name="oram_ctap_res_data" direction="in" portIndex="15">
+          <varref loc="f,527,27,527,45" name="oram_ctap_res_data" dtype_id="7"/>
+        </port>
+        <port loc="f,528,8,528,19" name="ctap_clk_en" direction="out" portIndex="16">
+          <varref loc="f,528,20,528,37" name="ctap_clk_en_inter" dtype_id="8"/>
+        </port>
+        <port loc="f,529,8,529,24" name="ctap_oram_clk_en" direction="out" portIndex="17">
+          <varref loc="f,529,25,529,41" name="ctap_oram_clk_en" dtype_id="1"/>
+        </port>
+      </instance>
+      <var loc="f,531,17,531,40" name="default_total_num_tiles" dtype_id="4" vartype="logic" origName="default_total_num_tiles">
+        <const loc="f,532,38,532,39" name="32&apos;sh2" dtype_id="9"/>
+      </var>
+      <instance loc="f,534,1,534,6" name="tile0" defName="tile__T2" origName="tile0">
+        <port loc="f,535,6,535,9" name="clk" direction="in" portIndex="1">
+          <varref loc="f,535,26,535,35" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,536,6,536,11" name="rst_n" direction="in" portIndex="2">
+          <varref loc="f,536,26,536,42" name="rst_n_inter_sync" dtype_id="1"/>
+        </port>
+        <port loc="f,537,6,537,12" name="clk_en" direction="in" portIndex="3">
+          <and loc="f,537,47,537,49" dtype_id="1">
+            <sel loc="f,537,43,537,44" dtype_id="1">
+              <varref loc="f,537,26,537,43" name="ctap_clk_en_inter" dtype_id="8"/>
+              <const loc="f,537,44,537,45" name="7&apos;h0" dtype_id="10"/>
+              <const loc="f,537,43,537,44" name="32&apos;h1" dtype_id="4"/>
+            </sel>
+            <varref loc="f,537,50,537,62" name="clk_en_inter" dtype_id="1"/>
+          </and>
+        </port>
+        <port loc="f,538,6,538,20" name="default_chipid" direction="in" portIndex="4">
+          <const loc="f,538,34,538,39" name="14&apos;h0" dtype_id="11"/>
+        </port>
+        <port loc="f,539,6,539,22" name="default_coreid_x" direction="in" portIndex="5">
+          <const loc="f,539,34,539,38" name="8&apos;h0" dtype_id="12"/>
+        </port>
+        <port loc="f,540,6,540,22" name="default_coreid_y" direction="in" portIndex="6">
+          <const loc="f,540,34,540,38" name="8&apos;h0" dtype_id="12"/>
+        </port>
+        <port loc="f,541,6,541,29" name="default_total_num_tiles" direction="in" portIndex="7">
+          <const loc="f,541,34,541,57" name="32&apos;sh2" dtype_id="4"/>
+        </port>
+        <port loc="f,542,6,542,17" name="flat_tileid" direction="in" portIndex="8">
+          <const loc="f,542,34,542,38" name="8&apos;h0" dtype_id="12"/>
+        </port>
+        <port loc="f,543,7,543,18" name="debug_req_i" direction="in" portIndex="9">
+          <sel loc="f,543,40,543,41" dtype_id="1">
+            <varref loc="f,543,29,543,40" name="debug_req_i" dtype_id="3"/>
+            <const loc="f,543,41,543,42" name="1&apos;h0" dtype_id="13"/>
+            <const loc="f,543,40,543,41" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,544,7,544,20" name="unavailable_o" direction="out" portIndex="10">
+          <sel loc="f,544,42,544,43" dtype_id="1">
+            <varref loc="f,544,29,544,42" name="unavailable_o" dtype_id="3"/>
+            <const loc="f,544,43,544,44" name="1&apos;h0" dtype_id="13"/>
+            <const loc="f,544,42,544,43" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,545,7,545,18" name="timer_irq_i" direction="in" portIndex="11">
+          <sel loc="f,545,40,545,41" dtype_id="1">
+            <varref loc="f,545,29,545,40" name="timer_irq_i" dtype_id="3"/>
+            <const loc="f,545,41,545,42" name="1&apos;h0" dtype_id="13"/>
+            <const loc="f,545,40,545,41" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,546,7,546,12" name="ipi_i" direction="in" portIndex="12">
+          <sel loc="f,546,34,546,35" dtype_id="1">
+            <varref loc="f,546,29,546,34" name="ipi_i" dtype_id="3"/>
+            <const loc="f,546,35,546,36" name="1&apos;h0" dtype_id="13"/>
+            <const loc="f,546,34,546,35" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,547,7,547,12" name="irq_i" direction="in" portIndex="13">
+          <sel loc="f,547,34,547,35" dtype_id="3">
+            <varref loc="f,547,29,547,34" name="irq_i" dtype_id="6"/>
+            <const loc="f,547,36,547,37" name="2&apos;h0" dtype_id="14"/>
+            <const loc="f,547,42,547,43" name="32&apos;sh2" dtype_id="9"/>
+          </sel>
+        </port>
+        <port loc="f,549,6,549,23" name="tile_jtag_ucb_val" direction="out" portIndex="14">
+          <varref loc="f,549,28,549,46" name="tile0_jtag_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,550,6,550,24" name="tile_jtag_ucb_data" direction="out" portIndex="15">
+          <varref loc="f,550,28,550,47" name="tile0_jtag_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,551,6,551,24" name="jtag_tiles_ucb_val" direction="in" portIndex="16">
+          <varref loc="f,551,28,551,46" name="jtag_tiles_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,552,6,552,25" name="jtag_tiles_ucb_data" direction="in" portIndex="17">
+          <varref loc="f,552,28,552,47" name="jtag_tiles_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,553,6,553,19" name="dyn0_dataIn_N" direction="in" portIndex="18">
+          <const loc="f,553,28,553,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,554,6,554,19" name="dyn0_dataIn_E" direction="in" portIndex="19">
+          <varref loc="f,554,28,554,52" name="tile_0_1_out_W_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,555,6,555,19" name="dyn0_dataIn_W" direction="in" portIndex="20">
+          <varref loc="f,555,28,555,51" name="offchip_processor_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,556,6,556,19" name="dyn0_dataIn_S" direction="in" portIndex="21">
+          <const loc="f,556,28,556,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,557,6,557,20" name="dyn0_validIn_N" direction="in" portIndex="22">
+          <const loc="f,557,28,557,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,558,6,558,20" name="dyn0_validIn_E" direction="in" portIndex="23">
+          <varref loc="f,558,28,558,53" name="tile_0_1_out_W_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,559,6,559,20" name="dyn0_validIn_W" direction="in" portIndex="24">
+          <varref loc="f,559,28,559,52" name="offchip_processor_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,560,6,560,20" name="dyn0_validIn_S" direction="in" portIndex="25">
+          <const loc="f,560,28,560,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,561,6,561,20" name="dyn0_dNo_yummy" direction="in" portIndex="26">
+          <const loc="f,561,28,561,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,562,6,562,20" name="dyn0_dEo_yummy" direction="in" portIndex="27">
+          <varref loc="f,562,28,562,53" name="tile_0_1_out_W_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,563,6,563,20" name="dyn0_dWo_yummy" direction="in" portIndex="28">
+          <varref loc="f,563,28,563,52" name="processor_offchip_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,564,6,564,20" name="dyn0_dSo_yummy" direction="in" portIndex="29">
+          <const loc="f,564,28,564,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,565,6,565,14" name="dyn0_dNo" direction="out" portIndex="30">
+          <varref loc="f,565,28,565,52" name="tile_0_0_out_N_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,566,6,566,14" name="dyn0_dEo" direction="out" portIndex="31">
+          <varref loc="f,566,28,566,52" name="tile_0_0_out_E_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,567,6,567,14" name="dyn0_dWo" direction="out" portIndex="32">
+          <varref loc="f,567,28,567,52" name="tile_0_0_out_W_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,568,6,568,14" name="dyn0_dSo" direction="out" portIndex="33">
+          <varref loc="f,568,28,568,52" name="tile_0_0_out_S_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,569,6,569,20" name="dyn0_dNo_valid" direction="out" portIndex="34">
+          <varref loc="f,569,28,569,53" name="tile_0_0_out_N_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,570,6,570,20" name="dyn0_dEo_valid" direction="out" portIndex="35">
+          <varref loc="f,570,28,570,53" name="tile_0_0_out_E_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,571,6,571,20" name="dyn0_dWo_valid" direction="out" portIndex="36">
+          <varref loc="f,571,28,571,53" name="tile_0_0_out_W_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,572,6,572,20" name="dyn0_dSo_valid" direction="out" portIndex="37">
+          <varref loc="f,572,28,572,53" name="tile_0_0_out_S_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,573,6,573,21" name="dyn0_yummyOut_N" direction="out" portIndex="38">
+          <varref loc="f,573,28,573,53" name="tile_0_0_out_N_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,574,6,574,21" name="dyn0_yummyOut_E" direction="out" portIndex="39">
+          <varref loc="f,574,28,574,53" name="tile_0_0_out_E_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,575,6,575,21" name="dyn0_yummyOut_W" direction="out" portIndex="40">
+          <varref loc="f,575,28,575,53" name="tile_0_0_out_W_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,576,6,576,21" name="dyn0_yummyOut_S" direction="out" portIndex="41">
+          <varref loc="f,576,28,576,53" name="tile_0_0_out_S_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,577,6,577,19" name="dyn1_dataIn_N" direction="in" portIndex="42">
+          <const loc="f,577,28,577,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,578,6,578,19" name="dyn1_dataIn_E" direction="in" portIndex="43">
+          <varref loc="f,578,28,578,52" name="tile_0_1_out_W_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,579,6,579,19" name="dyn1_dataIn_W" direction="in" portIndex="44">
+          <varref loc="f,579,28,579,51" name="offchip_processor_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,580,6,580,19" name="dyn1_dataIn_S" direction="in" portIndex="45">
+          <const loc="f,580,28,580,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,581,6,581,20" name="dyn1_validIn_N" direction="in" portIndex="46">
+          <const loc="f,581,28,581,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,582,6,582,20" name="dyn1_validIn_E" direction="in" portIndex="47">
+          <varref loc="f,582,28,582,53" name="tile_0_1_out_W_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,583,6,583,20" name="dyn1_validIn_W" direction="in" portIndex="48">
+          <varref loc="f,583,28,583,52" name="offchip_processor_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,584,6,584,20" name="dyn1_validIn_S" direction="in" portIndex="49">
+          <const loc="f,584,28,584,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,585,6,585,20" name="dyn1_dNo_yummy" direction="in" portIndex="50">
+          <const loc="f,585,28,585,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,586,6,586,20" name="dyn1_dEo_yummy" direction="in" portIndex="51">
+          <varref loc="f,586,28,586,53" name="tile_0_1_out_W_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,587,6,587,20" name="dyn1_dWo_yummy" direction="in" portIndex="52">
+          <varref loc="f,587,28,587,52" name="proc_oram_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,588,6,588,20" name="dyn1_dSo_yummy" direction="in" portIndex="53">
+          <const loc="f,588,28,588,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,589,6,589,14" name="dyn1_dNo" direction="out" portIndex="54">
+          <varref loc="f,589,28,589,52" name="tile_0_0_out_N_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,590,6,590,14" name="dyn1_dEo" direction="out" portIndex="55">
+          <varref loc="f,590,28,590,52" name="tile_0_0_out_E_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,591,6,591,14" name="dyn1_dWo" direction="out" portIndex="56">
+          <varref loc="f,591,28,591,52" name="tile_0_0_out_W_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,592,6,592,14" name="dyn1_dSo" direction="out" portIndex="57">
+          <varref loc="f,592,28,592,52" name="tile_0_0_out_S_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,593,6,593,20" name="dyn1_dNo_valid" direction="out" portIndex="58">
+          <varref loc="f,593,28,593,53" name="tile_0_0_out_N_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,594,6,594,20" name="dyn1_dEo_valid" direction="out" portIndex="59">
+          <varref loc="f,594,28,594,53" name="tile_0_0_out_E_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,595,6,595,20" name="dyn1_dWo_valid" direction="out" portIndex="60">
+          <varref loc="f,595,28,595,53" name="tile_0_0_out_W_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,596,6,596,20" name="dyn1_dSo_valid" direction="out" portIndex="61">
+          <varref loc="f,596,28,596,53" name="tile_0_0_out_S_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,597,6,597,21" name="dyn1_yummyOut_N" direction="out" portIndex="62">
+          <varref loc="f,597,28,597,53" name="tile_0_0_out_N_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,598,6,598,21" name="dyn1_yummyOut_E" direction="out" portIndex="63">
+          <varref loc="f,598,28,598,53" name="tile_0_0_out_E_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,599,6,599,21" name="dyn1_yummyOut_W" direction="out" portIndex="64">
+          <varref loc="f,599,28,599,53" name="tile_0_0_out_W_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,600,6,600,21" name="dyn1_yummyOut_S" direction="out" portIndex="65">
+          <varref loc="f,600,28,600,53" name="tile_0_0_out_S_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,601,6,601,19" name="dyn2_dataIn_N" direction="in" portIndex="66">
+          <const loc="f,601,28,601,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,602,6,602,19" name="dyn2_dataIn_E" direction="in" portIndex="67">
+          <varref loc="f,602,28,602,52" name="tile_0_1_out_W_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,603,6,603,19" name="dyn2_dataIn_W" direction="in" portIndex="68">
+          <varref loc="f,603,28,603,51" name="oram_proc_data" dtype_id="7"/>
+        </port>
+        <port loc="f,604,6,604,19" name="dyn2_dataIn_S" direction="in" portIndex="69">
+          <const loc="f,604,28,604,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,605,6,605,20" name="dyn2_validIn_N" direction="in" portIndex="70">
+          <const loc="f,605,28,605,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,606,6,606,20" name="dyn2_validIn_E" direction="in" portIndex="71">
+          <varref loc="f,606,28,606,53" name="tile_0_1_out_W_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,607,6,607,20" name="dyn2_validIn_W" direction="in" portIndex="72">
+          <varref loc="f,607,28,607,52" name="oram_proc_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,608,6,608,20" name="dyn2_validIn_S" direction="in" portIndex="73">
+          <const loc="f,608,28,608,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,609,6,609,20" name="dyn2_dNo_yummy" direction="in" portIndex="74">
+          <const loc="f,609,28,609,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,610,6,610,20" name="dyn2_dEo_yummy" direction="in" portIndex="75">
+          <varref loc="f,610,28,610,53" name="tile_0_1_out_W_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,611,6,611,20" name="dyn2_dWo_yummy" direction="in" portIndex="76">
+          <varref loc="f,611,28,611,52" name="processor_offchip_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,612,6,612,20" name="dyn2_dSo_yummy" direction="in" portIndex="77">
+          <const loc="f,612,28,612,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,613,6,613,14" name="dyn2_dNo" direction="out" portIndex="78">
+          <varref loc="f,613,28,613,52" name="tile_0_0_out_N_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,614,6,614,14" name="dyn2_dEo" direction="out" portIndex="79">
+          <varref loc="f,614,28,614,52" name="tile_0_0_out_E_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,615,6,615,14" name="dyn2_dWo" direction="out" portIndex="80">
+          <varref loc="f,615,28,615,52" name="tile_0_0_out_W_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,616,6,616,14" name="dyn2_dSo" direction="out" portIndex="81">
+          <varref loc="f,616,28,616,52" name="tile_0_0_out_S_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,617,6,617,20" name="dyn2_dNo_valid" direction="out" portIndex="82">
+          <varref loc="f,617,28,617,53" name="tile_0_0_out_N_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,618,6,618,20" name="dyn2_dEo_valid" direction="out" portIndex="83">
+          <varref loc="f,618,28,618,53" name="tile_0_0_out_E_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,619,6,619,20" name="dyn2_dWo_valid" direction="out" portIndex="84">
+          <varref loc="f,619,28,619,53" name="tile_0_0_out_W_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,620,6,620,20" name="dyn2_dSo_valid" direction="out" portIndex="85">
+          <varref loc="f,620,28,620,53" name="tile_0_0_out_S_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,621,6,621,21" name="dyn2_yummyOut_N" direction="out" portIndex="86">
+          <varref loc="f,621,28,621,53" name="tile_0_0_out_N_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,622,6,622,21" name="dyn2_yummyOut_E" direction="out" portIndex="87">
+          <varref loc="f,622,28,622,53" name="tile_0_0_out_E_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,623,6,623,21" name="dyn2_yummyOut_W" direction="out" portIndex="88">
+          <varref loc="f,623,28,623,53" name="tile_0_0_out_W_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,624,6,624,21" name="dyn2_yummyOut_S" direction="out" portIndex="89">
+          <varref loc="f,624,28,624,53" name="tile_0_0_out_S_noc3_yummy" dtype_id="1"/>
+        </port>
+      </instance>
+      <instance loc="f,627,1,627,6" name="tile1" defName="tile__T2" origName="tile1">
+        <port loc="f,628,6,628,9" name="clk" direction="in" portIndex="1">
+          <varref loc="f,628,26,628,35" name="clk_muxed" dtype_id="1"/>
+        </port>
+        <port loc="f,629,6,629,11" name="rst_n" direction="in" portIndex="2">
+          <varref loc="f,629,26,629,42" name="rst_n_inter_sync" dtype_id="1"/>
+        </port>
+        <port loc="f,630,6,630,12" name="clk_en" direction="in" portIndex="3">
+          <and loc="f,630,47,630,49" dtype_id="1">
+            <sel loc="f,630,43,630,44" dtype_id="1">
+              <varref loc="f,630,26,630,43" name="ctap_clk_en_inter" dtype_id="8"/>
+              <const loc="f,630,44,630,45" name="7&apos;h1" dtype_id="10"/>
+              <const loc="f,630,43,630,44" name="32&apos;h1" dtype_id="4"/>
+            </sel>
+            <varref loc="f,630,50,630,62" name="clk_en_inter" dtype_id="1"/>
+          </and>
+        </port>
+        <port loc="f,631,6,631,20" name="default_chipid" direction="in" portIndex="4">
+          <const loc="f,631,34,631,39" name="14&apos;h0" dtype_id="11"/>
+        </port>
+        <port loc="f,632,6,632,22" name="default_coreid_x" direction="in" portIndex="5">
+          <const loc="f,632,34,632,38" name="8&apos;h1" dtype_id="12"/>
+        </port>
+        <port loc="f,633,6,633,22" name="default_coreid_y" direction="in" portIndex="6">
+          <const loc="f,633,34,633,38" name="8&apos;h0" dtype_id="12"/>
+        </port>
+        <port loc="f,634,6,634,29" name="default_total_num_tiles" direction="in" portIndex="7">
+          <const loc="f,634,34,634,57" name="32&apos;sh2" dtype_id="4"/>
+        </port>
+        <port loc="f,635,6,635,17" name="flat_tileid" direction="in" portIndex="8">
+          <const loc="f,635,34,635,38" name="8&apos;h1" dtype_id="12"/>
+        </port>
+        <port loc="f,636,7,636,18" name="debug_req_i" direction="in" portIndex="9">
+          <sel loc="f,636,40,636,41" dtype_id="1">
+            <varref loc="f,636,29,636,40" name="debug_req_i" dtype_id="3"/>
+            <const loc="f,636,41,636,42" name="1&apos;h1" dtype_id="13"/>
+            <const loc="f,636,40,636,41" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,637,7,637,20" name="unavailable_o" direction="out" portIndex="10">
+          <sel loc="f,637,42,637,43" dtype_id="1">
+            <varref loc="f,637,29,637,42" name="unavailable_o" dtype_id="3"/>
+            <const loc="f,637,43,637,44" name="1&apos;h1" dtype_id="13"/>
+            <const loc="f,637,42,637,43" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,638,7,638,18" name="timer_irq_i" direction="in" portIndex="11">
+          <sel loc="f,638,40,638,41" dtype_id="1">
+            <varref loc="f,638,29,638,40" name="timer_irq_i" dtype_id="3"/>
+            <const loc="f,638,41,638,42" name="1&apos;h1" dtype_id="13"/>
+            <const loc="f,638,40,638,41" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,639,7,639,12" name="ipi_i" direction="in" portIndex="12">
+          <sel loc="f,639,34,639,35" dtype_id="1">
+            <varref loc="f,639,29,639,34" name="ipi_i" dtype_id="3"/>
+            <const loc="f,639,35,639,36" name="1&apos;h1" dtype_id="13"/>
+            <const loc="f,639,34,639,35" name="32&apos;h1" dtype_id="4"/>
+          </sel>
+        </port>
+        <port loc="f,640,7,640,12" name="irq_i" direction="in" portIndex="13">
+          <sel loc="f,640,34,640,35" dtype_id="3">
+            <varref loc="f,640,29,640,34" name="irq_i" dtype_id="6"/>
+            <const loc="f,640,36,640,37" name="2&apos;h2" dtype_id="14"/>
+            <const loc="f,640,42,640,43" name="32&apos;sh2" dtype_id="9"/>
+          </sel>
+        </port>
+        <port loc="f,642,6,642,23" name="tile_jtag_ucb_val" direction="out" portIndex="14">
+          <varref loc="f,642,28,642,46" name="tile1_jtag_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,643,6,643,24" name="tile_jtag_ucb_data" direction="out" portIndex="15">
+          <varref loc="f,643,28,643,47" name="tile1_jtag_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,644,6,644,24" name="jtag_tiles_ucb_val" direction="in" portIndex="16">
+          <varref loc="f,644,28,644,46" name="jtag_tiles_ucb_val" dtype_id="1"/>
+        </port>
+        <port loc="f,645,6,645,25" name="jtag_tiles_ucb_data" direction="in" portIndex="17">
+          <varref loc="f,645,28,645,47" name="jtag_tiles_ucb_data" dtype_id="6"/>
+        </port>
+        <port loc="f,646,6,646,19" name="dyn0_dataIn_N" direction="in" portIndex="18">
+          <const loc="f,646,28,646,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,647,6,647,19" name="dyn0_dataIn_E" direction="in" portIndex="19">
+          <const loc="f,647,28,647,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,648,6,648,19" name="dyn0_dataIn_W" direction="in" portIndex="20">
+          <varref loc="f,648,28,648,52" name="tile_0_0_out_E_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,649,6,649,19" name="dyn0_dataIn_S" direction="in" portIndex="21">
+          <const loc="f,649,28,649,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,650,6,650,20" name="dyn0_validIn_N" direction="in" portIndex="22">
+          <const loc="f,650,28,650,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,651,6,651,20" name="dyn0_validIn_E" direction="in" portIndex="23">
+          <const loc="f,651,28,651,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,652,6,652,20" name="dyn0_validIn_W" direction="in" portIndex="24">
+          <varref loc="f,652,28,652,53" name="tile_0_0_out_E_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,653,6,653,20" name="dyn0_validIn_S" direction="in" portIndex="25">
+          <const loc="f,653,28,653,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,654,6,654,20" name="dyn0_dNo_yummy" direction="in" portIndex="26">
+          <const loc="f,654,28,654,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,655,6,655,20" name="dyn0_dEo_yummy" direction="in" portIndex="27">
+          <const loc="f,655,28,655,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,656,6,656,20" name="dyn0_dWo_yummy" direction="in" portIndex="28">
+          <varref loc="f,656,28,656,53" name="tile_0_0_out_E_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,657,6,657,20" name="dyn0_dSo_yummy" direction="in" portIndex="29">
+          <const loc="f,657,28,657,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,658,6,658,14" name="dyn0_dNo" direction="out" portIndex="30">
+          <varref loc="f,658,28,658,52" name="tile_0_1_out_N_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,659,6,659,14" name="dyn0_dEo" direction="out" portIndex="31">
+          <varref loc="f,659,28,659,52" name="tile_0_1_out_E_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,660,6,660,14" name="dyn0_dWo" direction="out" portIndex="32">
+          <varref loc="f,660,28,660,52" name="tile_0_1_out_W_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,661,6,661,14" name="dyn0_dSo" direction="out" portIndex="33">
+          <varref loc="f,661,28,661,52" name="tile_0_1_out_S_noc1_data" dtype_id="7"/>
+        </port>
+        <port loc="f,662,6,662,20" name="dyn0_dNo_valid" direction="out" portIndex="34">
+          <varref loc="f,662,28,662,53" name="tile_0_1_out_N_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,663,6,663,20" name="dyn0_dEo_valid" direction="out" portIndex="35">
+          <varref loc="f,663,28,663,53" name="tile_0_1_out_E_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,664,6,664,20" name="dyn0_dWo_valid" direction="out" portIndex="36">
+          <varref loc="f,664,28,664,53" name="tile_0_1_out_W_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,665,6,665,20" name="dyn0_dSo_valid" direction="out" portIndex="37">
+          <varref loc="f,665,28,665,53" name="tile_0_1_out_S_noc1_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,666,6,666,21" name="dyn0_yummyOut_N" direction="out" portIndex="38">
+          <varref loc="f,666,28,666,53" name="tile_0_1_out_N_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,667,6,667,21" name="dyn0_yummyOut_E" direction="out" portIndex="39">
+          <varref loc="f,667,28,667,53" name="tile_0_1_out_E_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,668,6,668,21" name="dyn0_yummyOut_W" direction="out" portIndex="40">
+          <varref loc="f,668,28,668,53" name="tile_0_1_out_W_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,669,6,669,21" name="dyn0_yummyOut_S" direction="out" portIndex="41">
+          <varref loc="f,669,28,669,53" name="tile_0_1_out_S_noc1_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,670,6,670,19" name="dyn1_dataIn_N" direction="in" portIndex="42">
+          <const loc="f,670,28,670,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,671,6,671,19" name="dyn1_dataIn_E" direction="in" portIndex="43">
+          <const loc="f,671,28,671,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,672,6,672,19" name="dyn1_dataIn_W" direction="in" portIndex="44">
+          <varref loc="f,672,28,672,52" name="tile_0_0_out_E_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,673,6,673,19" name="dyn1_dataIn_S" direction="in" portIndex="45">
+          <const loc="f,673,28,673,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,674,6,674,20" name="dyn1_validIn_N" direction="in" portIndex="46">
+          <const loc="f,674,28,674,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,675,6,675,20" name="dyn1_validIn_E" direction="in" portIndex="47">
+          <const loc="f,675,28,675,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,676,6,676,20" name="dyn1_validIn_W" direction="in" portIndex="48">
+          <varref loc="f,676,28,676,53" name="tile_0_0_out_E_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,677,6,677,20" name="dyn1_validIn_S" direction="in" portIndex="49">
+          <const loc="f,677,28,677,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,678,6,678,20" name="dyn1_dNo_yummy" direction="in" portIndex="50">
+          <const loc="f,678,28,678,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,679,6,679,20" name="dyn1_dEo_yummy" direction="in" portIndex="51">
+          <const loc="f,679,28,679,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,680,6,680,20" name="dyn1_dWo_yummy" direction="in" portIndex="52">
+          <varref loc="f,680,28,680,53" name="tile_0_0_out_E_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,681,6,681,20" name="dyn1_dSo_yummy" direction="in" portIndex="53">
+          <const loc="f,681,28,681,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,682,6,682,14" name="dyn1_dNo" direction="out" portIndex="54">
+          <varref loc="f,682,28,682,52" name="tile_0_1_out_N_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,683,6,683,14" name="dyn1_dEo" direction="out" portIndex="55">
+          <varref loc="f,683,28,683,52" name="tile_0_1_out_E_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,684,6,684,14" name="dyn1_dWo" direction="out" portIndex="56">
+          <varref loc="f,684,28,684,52" name="tile_0_1_out_W_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,685,6,685,14" name="dyn1_dSo" direction="out" portIndex="57">
+          <varref loc="f,685,28,685,52" name="tile_0_1_out_S_noc2_data" dtype_id="7"/>
+        </port>
+        <port loc="f,686,6,686,20" name="dyn1_dNo_valid" direction="out" portIndex="58">
+          <varref loc="f,686,28,686,53" name="tile_0_1_out_N_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,687,6,687,20" name="dyn1_dEo_valid" direction="out" portIndex="59">
+          <varref loc="f,687,28,687,53" name="tile_0_1_out_E_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,688,6,688,20" name="dyn1_dWo_valid" direction="out" portIndex="60">
+          <varref loc="f,688,28,688,53" name="tile_0_1_out_W_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,689,6,689,20" name="dyn1_dSo_valid" direction="out" portIndex="61">
+          <varref loc="f,689,28,689,53" name="tile_0_1_out_S_noc2_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,690,6,690,21" name="dyn1_yummyOut_N" direction="out" portIndex="62">
+          <varref loc="f,690,28,690,53" name="tile_0_1_out_N_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,691,6,691,21" name="dyn1_yummyOut_E" direction="out" portIndex="63">
+          <varref loc="f,691,28,691,53" name="tile_0_1_out_E_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,692,6,692,21" name="dyn1_yummyOut_W" direction="out" portIndex="64">
+          <varref loc="f,692,28,692,53" name="tile_0_1_out_W_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,693,6,693,21" name="dyn1_yummyOut_S" direction="out" portIndex="65">
+          <varref loc="f,693,28,693,53" name="tile_0_1_out_S_noc2_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,694,6,694,19" name="dyn2_dataIn_N" direction="in" portIndex="66">
+          <const loc="f,694,28,694,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,695,6,695,19" name="dyn2_dataIn_E" direction="in" portIndex="67">
+          <const loc="f,695,28,695,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,696,6,696,19" name="dyn2_dataIn_W" direction="in" portIndex="68">
+          <varref loc="f,696,28,696,52" name="tile_0_0_out_E_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,697,6,697,19" name="dyn2_dataIn_S" direction="in" portIndex="69">
+          <const loc="f,697,28,697,49" name="64&apos;h0" dtype_id="7"/>
+        </port>
+        <port loc="f,698,6,698,20" name="dyn2_validIn_N" direction="in" portIndex="70">
+          <const loc="f,698,28,698,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,699,6,699,20" name="dyn2_validIn_E" direction="in" portIndex="71">
+          <const loc="f,699,28,699,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,700,6,700,20" name="dyn2_validIn_W" direction="in" portIndex="72">
+          <varref loc="f,700,28,700,53" name="tile_0_0_out_E_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,701,6,701,20" name="dyn2_validIn_S" direction="in" portIndex="73">
+          <const loc="f,701,28,701,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,702,6,702,20" name="dyn2_dNo_yummy" direction="in" portIndex="74">
+          <const loc="f,702,28,702,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,703,6,703,20" name="dyn2_dEo_yummy" direction="in" portIndex="75">
+          <const loc="f,703,28,703,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,704,6,704,20" name="dyn2_dWo_yummy" direction="in" portIndex="76">
+          <varref loc="f,704,28,704,53" name="tile_0_0_out_E_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,705,6,705,20" name="dyn2_dSo_yummy" direction="in" portIndex="77">
+          <const loc="f,705,28,705,50" name="1&apos;h0" dtype_id="1"/>
+        </port>
+        <port loc="f,706,6,706,14" name="dyn2_dNo" direction="out" portIndex="78">
+          <varref loc="f,706,28,706,52" name="tile_0_1_out_N_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,707,6,707,14" name="dyn2_dEo" direction="out" portIndex="79">
+          <varref loc="f,707,28,707,52" name="tile_0_1_out_E_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,708,6,708,14" name="dyn2_dWo" direction="out" portIndex="80">
+          <varref loc="f,708,28,708,52" name="tile_0_1_out_W_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,709,6,709,14" name="dyn2_dSo" direction="out" portIndex="81">
+          <varref loc="f,709,28,709,52" name="tile_0_1_out_S_noc3_data" dtype_id="7"/>
+        </port>
+        <port loc="f,710,6,710,20" name="dyn2_dNo_valid" direction="out" portIndex="82">
+          <varref loc="f,710,28,710,53" name="tile_0_1_out_N_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,711,6,711,20" name="dyn2_dEo_valid" direction="out" portIndex="83">
+          <varref loc="f,711,28,711,53" name="tile_0_1_out_E_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,712,6,712,20" name="dyn2_dWo_valid" direction="out" portIndex="84">
+          <varref loc="f,712,28,712,53" name="tile_0_1_out_W_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,713,6,713,20" name="dyn2_dSo_valid" direction="out" portIndex="85">
+          <varref loc="f,713,28,713,53" name="tile_0_1_out_S_noc3_valid" dtype_id="1"/>
+        </port>
+        <port loc="f,714,6,714,21" name="dyn2_yummyOut_N" direction="out" portIndex="86">
+          <varref loc="f,714,28,714,53" name="tile_0_1_out_N_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,715,6,715,21" name="dyn2_yummyOut_E" direction="out" portIndex="87">
+          <varref loc="f,715,28,715,53" name="tile_0_1_out_E_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,716,6,716,21" name="dyn2_yummyOut_W" direction="out" portIndex="88">
+          <varref loc="f,716,28,716,53" name="tile_0_1_out_W_noc3_yummy" dtype_id="1"/>
+        </port>
+        <port loc="f,717,6,717,21" name="dyn2_yummyOut_S" direction="out" portIndex="89">
+          <varref loc="f,717,28,717,53" name="tile_0_1_out_S_noc3_yummy" dtype_id="1"/>
+        </port>
+      </instance>
+      <initial loc="f,225,37,225,38">
+        <assign loc="f,225,37,225,38" dtype_id="7">
+          <const loc="f,225,39,225,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,225,15,225,36" name="dummy_out_N_noc1_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,226,37,226,38">
+        <assign loc="f,226,37,226,38" dtype_id="7">
+          <const loc="f,226,39,226,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,226,15,226,36" name="dummy_out_S_noc1_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,227,37,227,38">
+        <assign loc="f,227,37,227,38" dtype_id="7">
+          <const loc="f,227,39,227,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,227,15,227,36" name="dummy_out_E_noc1_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,228,37,228,38">
+        <assign loc="f,228,37,228,38" dtype_id="7">
+          <const loc="f,228,39,228,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,228,15,228,36" name="dummy_out_W_noc1_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,229,29,229,30">
+        <assign loc="f,229,29,229,30" dtype_id="1">
+          <const loc="f,229,31,229,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,229,6,229,28" name="dummy_out_N_noc1_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,230,29,230,30">
+        <assign loc="f,230,29,230,30" dtype_id="1">
+          <const loc="f,230,31,230,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,230,6,230,28" name="dummy_out_S_noc1_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,231,29,231,30">
+        <assign loc="f,231,29,231,30" dtype_id="1">
+          <const loc="f,231,31,231,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,231,6,231,28" name="dummy_out_E_noc1_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,232,29,232,30">
+        <assign loc="f,232,29,232,30" dtype_id="1">
+          <const loc="f,232,31,232,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,232,6,232,28" name="dummy_out_W_noc1_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,233,29,233,30">
+        <assign loc="f,233,29,233,30" dtype_id="1">
+          <const loc="f,233,31,233,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,233,6,233,28" name="dummy_out_N_noc1_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,234,29,234,30">
+        <assign loc="f,234,29,234,30" dtype_id="1">
+          <const loc="f,234,31,234,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,234,6,234,28" name="dummy_out_S_noc1_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,235,29,235,30">
+        <assign loc="f,235,29,235,30" dtype_id="1">
+          <const loc="f,235,31,235,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,235,6,235,28" name="dummy_out_E_noc1_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,236,29,236,30">
+        <assign loc="f,236,29,236,30" dtype_id="1">
+          <const loc="f,236,31,236,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,236,6,236,28" name="dummy_out_W_noc1_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,237,37,237,38">
+        <assign loc="f,237,37,237,38" dtype_id="7">
+          <const loc="f,237,39,237,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,237,15,237,36" name="dummy_out_N_noc2_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,238,37,238,38">
+        <assign loc="f,238,37,238,38" dtype_id="7">
+          <const loc="f,238,39,238,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,238,15,238,36" name="dummy_out_S_noc2_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,239,37,239,38">
+        <assign loc="f,239,37,239,38" dtype_id="7">
+          <const loc="f,239,39,239,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,239,15,239,36" name="dummy_out_E_noc2_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,240,37,240,38">
+        <assign loc="f,240,37,240,38" dtype_id="7">
+          <const loc="f,240,39,240,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,240,15,240,36" name="dummy_out_W_noc2_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,241,29,241,30">
+        <assign loc="f,241,29,241,30" dtype_id="1">
+          <const loc="f,241,31,241,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,241,6,241,28" name="dummy_out_N_noc2_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,242,29,242,30">
+        <assign loc="f,242,29,242,30" dtype_id="1">
+          <const loc="f,242,31,242,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,242,6,242,28" name="dummy_out_S_noc2_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,243,29,243,30">
+        <assign loc="f,243,29,243,30" dtype_id="1">
+          <const loc="f,243,31,243,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,243,6,243,28" name="dummy_out_E_noc2_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,244,29,244,30">
+        <assign loc="f,244,29,244,30" dtype_id="1">
+          <const loc="f,244,31,244,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,244,6,244,28" name="dummy_out_W_noc2_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,245,29,245,30">
+        <assign loc="f,245,29,245,30" dtype_id="1">
+          <const loc="f,245,31,245,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,245,6,245,28" name="dummy_out_N_noc2_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,246,29,246,30">
+        <assign loc="f,246,29,246,30" dtype_id="1">
+          <const loc="f,246,31,246,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,246,6,246,28" name="dummy_out_S_noc2_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,247,29,247,30">
+        <assign loc="f,247,29,247,30" dtype_id="1">
+          <const loc="f,247,31,247,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,247,6,247,28" name="dummy_out_E_noc2_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,248,29,248,30">
+        <assign loc="f,248,29,248,30" dtype_id="1">
+          <const loc="f,248,31,248,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,248,6,248,28" name="dummy_out_W_noc2_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,249,37,249,38">
+        <assign loc="f,249,37,249,38" dtype_id="7">
+          <const loc="f,249,39,249,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,249,15,249,36" name="dummy_out_N_noc3_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,250,37,250,38">
+        <assign loc="f,250,37,250,38" dtype_id="7">
+          <const loc="f,250,39,250,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,250,15,250,36" name="dummy_out_S_noc3_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,251,37,251,38">
+        <assign loc="f,251,37,251,38" dtype_id="7">
+          <const loc="f,251,39,251,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,251,15,251,36" name="dummy_out_E_noc3_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,252,37,252,38">
+        <assign loc="f,252,37,252,38" dtype_id="7">
+          <const loc="f,252,39,252,44" name="64&apos;h0" dtype_id="7"/>
+          <varref loc="f,252,15,252,36" name="dummy_out_W_noc3_data" dtype_id="7"/>
+        </assign>
+      </initial>
+      <initial loc="f,253,29,253,30">
+        <assign loc="f,253,29,253,30" dtype_id="1">
+          <const loc="f,253,31,253,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,253,6,253,28" name="dummy_out_N_noc3_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,254,29,254,30">
+        <assign loc="f,254,29,254,30" dtype_id="1">
+          <const loc="f,254,31,254,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,254,6,254,28" name="dummy_out_S_noc3_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,255,29,255,30">
+        <assign loc="f,255,29,255,30" dtype_id="1">
+          <const loc="f,255,31,255,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,255,6,255,28" name="dummy_out_E_noc3_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,256,29,256,30">
+        <assign loc="f,256,29,256,30" dtype_id="1">
+          <const loc="f,256,31,256,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,256,6,256,28" name="dummy_out_W_noc3_valid" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,257,29,257,30">
+        <assign loc="f,257,29,257,30" dtype_id="1">
+          <const loc="f,257,31,257,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,257,6,257,28" name="dummy_out_N_noc3_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,258,29,258,30">
+        <assign loc="f,258,29,258,30" dtype_id="1">
+          <const loc="f,258,31,258,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,258,6,258,28" name="dummy_out_S_noc3_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,259,29,259,30">
+        <assign loc="f,259,29,259,30" dtype_id="1">
+          <const loc="f,259,31,259,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,259,6,259,28" name="dummy_out_E_noc3_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,260,29,260,30">
+        <assign loc="f,260,29,260,30" dtype_id="1">
+          <const loc="f,260,31,260,35" name="1&apos;h0" dtype_id="1"/>
+          <varref loc="f,260,6,260,28" name="dummy_out_W_noc3_yummy" dtype_id="1"/>
+        </assign>
+      </initial>
+      <initial loc="f,532,36,532,37">
+        <assign loc="f,532,36,532,37" dtype_id="4">
+          <const loc="f,532,38,532,39" name="32&apos;sh2" dtype_id="9"/>
+          <varref loc="f,532,12,532,35" name="default_total_num_tiles" dtype_id="4"/>
+        </assign>
+      </initial>
+      <contassign loc="f,331,27,331,28" dtype_id="1">
+        <or loc="f,331,48,331,49" dtype_id="1">
+          <varref loc="f,149,9,149,27" name="tile0_jtag_ucb_val" dtype_id="1"/>
+          <varref loc="f,151,6,151,24" name="tile1_jtag_ucb_val" dtype_id="1"/>
+        </or>
+        <varref loc="f,331,27,331,28" name="tiles_jtag_ucb_val" dtype_id="1"/>
+      </contassign>
+      <contassign loc="f,332,28,332,29" dtype_id="6">
+        <or loc="f,332,50,332,51" dtype_id="6">
+          <varref loc="f,150,14,150,33" name="tile0_jtag_ucb_data" dtype_id="6"/>
+          <varref loc="f,152,14,152,33" name="tile1_jtag_ucb_data" dtype_id="6"/>
+        </or>
+        <varref loc="f,332,28,332,29" name="tiles_jtag_ucb_data" dtype_id="6"/>
+      </contassign>
+    </module>
+    <module loc="e,31,8,31,19" name="chip_bridge" origName="chip_bridge">
+      <var loc="e,64,17,64,22" name="rst_n" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="rst_n"/>
+      <var loc="e,65,17,65,25" name="chip_clk" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="chip_clk"/>
+      <var loc="e,66,17,66,28" name="intcnct_clk" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="intcnct_clk"/>
+      <var loc="e,67,17,67,26" name="async_mux" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="async_mux"/>
+      <var loc="e,69,17,69,30" name="network_out_1" dtype_id="7" dir="input" pinIndex="5" vartype="logic" origName="network_out_1"/>
+      <var loc="e,70,17,70,30" name="network_out_2" dtype_id="7" dir="input" pinIndex="6" vartype="logic" origName="network_out_2"/>
+      <var loc="e,71,17,71,30" name="network_out_3" dtype_id="7" dir="input" pinIndex="7" vartype="logic" origName="network_out_3"/>
+      <var loc="e,72,17,72,31" name="data_out_val_1" dtype_id="1" dir="input" pinIndex="8" vartype="logic" origName="data_out_val_1"/>
+      <var loc="e,73,17,73,31" name="data_out_val_2" dtype_id="1" dir="input" pinIndex="9" vartype="logic" origName="data_out_val_2"/>
+      <var loc="e,74,17,74,31" name="data_out_val_3" dtype_id="1" dir="input" pinIndex="10" vartype="logic" origName="data_out_val_3"/>
+      <var loc="e,75,17,75,31" name="data_out_rdy_1" dtype_id="1" dir="output" pinIndex="11" vartype="logic" origName="data_out_rdy_1"/>
+      <var loc="e,76,17,76,31" name="data_out_rdy_2" dtype_id="1" dir="output" pinIndex="12" vartype="logic" origName="data_out_rdy_2"/>
+      <var loc="e,77,17,77,31" name="data_out_rdy_3" dtype_id="1" dir="output" pinIndex="13" vartype="logic" origName="data_out_rdy_3"/>
+      <var loc="e,93,17,93,32" name="intcnct_data_in" dtype_id="4" dir="input" pinIndex="14" vartype="logic" origName="intcnct_data_in"/>
+      <var loc="e,94,17,94,35" name="intcnct_channel_in" dtype_id="3" dir="input" pinIndex="15" vartype="logic" origName="intcnct_channel_in"/>
+      <var loc="e,95,17,95,39" name="intcnct_credit_back_in" dtype_id="5" dir="output" pinIndex="16" vartype="logic" origName="intcnct_credit_back_in"/>
+      <var loc="e,83,17,83,29" name="network_in_1" dtype_id="7" dir="output" pinIndex="17" vartype="logic" origName="network_in_1"/>
+      <var loc="e,84,17,84,29" name="network_in_2" dtype_id="7" dir="output" pinIndex="18" vartype="logic" origName="network_in_2"/>
+      <var loc="e,85,17,85,29" name="network_in_3" dtype_id="7" dir="output" pinIndex="19" vartype="logic" origName="network_in_3"/>
+      <var loc="e,86,17,86,30" name="data_in_val_1" dtype_id="1" dir="output" pinIndex="20" vartype="logic" origName="data_in_val_1"/>
+      <var loc="e,87,17,87,30" name="data_in_val_2" dtype_id="1" dir="output" pinIndex="21" vartype="logic" origName="data_in_val_2"/>
+      <var loc="e,88,17,88,30" name="data_in_val_3" dtype_id="1" dir="output" pinIndex="22" vartype="logic" origName="data_in_val_3"/>
+      <var loc="e,89,17,89,30" name="data_in_rdy_1" dtype_id="1" dir="input" pinIndex="23" vartype="logic" origName="data_in_rdy_1"/>
+      <var loc="e,90,17,90,30" name="data_in_rdy_2" dtype_id="1" dir="input" pinIndex="24" vartype="logic" origName="data_in_rdy_2"/>
+      <var loc="e,91,17,91,30" name="data_in_rdy_3" dtype_id="1" dir="input" pinIndex="25" vartype="logic" origName="data_in_rdy_3"/>
+      <var loc="e,79,17,79,33" name="intcnct_data_out" dtype_id="4" dir="output" pinIndex="26" vartype="logic" origName="intcnct_data_out"/>
+      <var loc="e,80,17,80,36" name="intcnct_channel_out" dtype_id="3" dir="output" pinIndex="27" vartype="logic" origName="intcnct_channel_out"/>
+      <var loc="e,81,17,81,40" name="intcnct_credit_back_out" dtype_id="5" dir="input" pinIndex="28" vartype="logic" origName="intcnct_credit_back_out"/>
+    </module>
+    <module loc="g,3,8,3,15" name="clk_mux" origName="clk_mux">
+      <var loc="g,4,17,4,23" name="clk0_p" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk0_p"/>
+      <var loc="g,5,17,5,23" name="clk0_n" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="clk0_n"/>
+      <var loc="g,6,17,6,23" name="clk1_p" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="clk1_p"/>
+      <var loc="g,7,17,7,23" name="clk1_n" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="clk1_n"/>
+      <var loc="g,8,17,8,21" name="clk2" dtype_id="1" dir="input" pinIndex="5" vartype="logic" origName="clk2"/>
+      <var loc="g,10,17,10,20" name="sel" dtype_id="3" dir="input" pinIndex="6" vartype="logic" origName="sel"/>
+      <var loc="g,12,17,12,26" name="clk_muxed" dtype_id="1" dir="output" pinIndex="7" vartype="logic" origName="clk_muxed"/>
+    </module>
+    <module loc="h,32,8,32,22" name="clk_se_to_diff" origName="clk_se_to_diff">
+      <var loc="h,33,13,33,19" name="clk_se" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk_se"/>
+      <var loc="h,35,13,35,18" name="clk_p" dtype_id="1" dir="output" pinIndex="2" vartype="logic" origName="clk_p"/>
+      <var loc="h,36,13,36,18" name="clk_n" dtype_id="1" dir="output" pinIndex="3" vartype="logic" origName="clk_n"/>
+    </module>
+    <module loc="i,36,8,36,24" name="credit_to_valrdy" origName="credit_to_valrdy">
+      <var loc="i,50,11,50,14" name="clk" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk"/>
+      <var loc="i,51,11,51,16" name="reset" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="reset"/>
+      <var loc="i,52,20,52,27" name="data_in" dtype_id="7" dir="input" pinIndex="3" vartype="logic" origName="data_in"/>
+      <var loc="i,53,11,53,19" name="valid_in" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="valid_in"/>
+      <var loc="i,56,12,56,20" name="yummy_in" dtype_id="1" dir="output" pinIndex="5" vartype="logic" origName="yummy_in"/>
+      <var loc="i,58,20,58,28" name="data_out" dtype_id="7" dir="output" pinIndex="6" vartype="logic" origName="data_out"/>
+      <var loc="i,57,12,57,21" name="valid_out" dtype_id="1" dir="output" pinIndex="7" vartype="logic" origName="valid_out"/>
+      <var loc="i,54,14,54,23" name="ready_out" dtype_id="1" dir="input" pinIndex="8" vartype="logic" origName="ready_out"/>
+    </module>
+    <module loc="j,49,8,49,12" name="jtag" origName="jtag">
+      <var loc="j,50,11,50,14" name="clk" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk"/>
+      <var loc="j,51,11,51,16" name="rst_n" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="rst_n"/>
+      <var loc="j,54,16,54,24" name="jtag_clk" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="jtag_clk"/>
+      <var loc="j,55,16,55,26" name="jtag_rst_l" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="jtag_rst_l"/>
+      <var loc="j,56,16,56,28" name="jtag_modesel" dtype_id="1" dir="input" pinIndex="5" vartype="logic" origName="jtag_modesel"/>
+      <var loc="j,57,16,57,27" name="jtag_datain" dtype_id="1" dir="input" pinIndex="6" vartype="logic" origName="jtag_datain"/>
+      <var loc="j,58,17,58,29" name="jtag_dataout" dtype_id="1" dir="output" pinIndex="7" vartype="logic" origName="jtag_dataout"/>
+      <var loc="j,59,17,59,32" name="jtag_dataout_en" dtype_id="1" dir="output" pinIndex="8" vartype="logic" origName="jtag_dataout_en"/>
+      <var loc="j,62,17,62,35" name="jtag_tiles_ucb_val" dtype_id="1" dir="output" pinIndex="9" vartype="logic" origName="jtag_tiles_ucb_val"/>
+      <var loc="j,63,25,63,44" name="jtag_tiles_ucb_data" dtype_id="6" dir="output" pinIndex="10" vartype="logic" origName="jtag_tiles_ucb_data"/>
+      <var loc="j,66,16,66,34" name="tiles_jtag_ucb_val" dtype_id="1" dir="input" pinIndex="11" vartype="logic" origName="tiles_jtag_ucb_val"/>
+      <var loc="j,67,24,67,43" name="tiles_jtag_ucb_data" dtype_id="6" dir="input" pinIndex="12" vartype="logic" origName="tiles_jtag_ucb_data"/>
+      <var loc="j,69,17,69,34" name="ctap_oram_req_val" dtype_id="1" dir="output" pinIndex="13" vartype="logic" origName="ctap_oram_req_val"/>
+      <var loc="j,70,25,70,43" name="ctap_oram_req_misc" dtype_id="6" dir="output" pinIndex="14" vartype="logic" origName="ctap_oram_req_misc"/>
+      <var loc="j,71,25,71,43" name="oram_ctap_res_data" dtype_id="7" dir="input" pinIndex="15" vartype="logic" origName="oram_ctap_res_data"/>
+      <var loc="j,77,25,77,36" name="ctap_clk_en" dtype_id="8" dir="output" pinIndex="16" vartype="logic" origName="ctap_clk_en"/>
+      <var loc="j,78,17,78,33" name="ctap_oram_clk_en" dtype_id="1" dir="output" pinIndex="17" vartype="logic" origName="ctap_oram_clk_en"/>
+    </module>
+    <module loc="k,34,8,34,11" name="OCI" origName="OCI">
+      <var loc="k,36,10,36,14" name="slew" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="slew"/>
+      <var loc="k,37,10,37,17" name="impsel1" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="impsel1"/>
+      <var loc="k,38,10,38,17" name="impsel2" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="impsel2"/>
+      <var loc="k,39,10,39,22" name="core_ref_clk" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="core_ref_clk"/>
+      <var loc="k,40,10,40,16" name="io_clk" dtype_id="1" dir="input" pinIndex="5" vartype="logic" origName="io_clk"/>
+      <var loc="k,41,10,41,15" name="rst_n" dtype_id="1" dir="input" pinIndex="6" vartype="logic" origName="rst_n"/>
+      <var loc="k,42,10,42,19" name="pll_rst_n" dtype_id="1" dir="input" pinIndex="7" vartype="logic" origName="pll_rst_n"/>
+      <var loc="k,43,16,43,26" name="pll_rangea" dtype_id="2" dir="input" pinIndex="8" vartype="logic" origName="pll_rangea"/>
+      <var loc="k,44,16,44,27" name="clk_mux_sel" dtype_id="3" dir="input" pinIndex="9" vartype="logic" origName="clk_mux_sel"/>
+      <var loc="k,45,10,45,16" name="clk_en" dtype_id="1" dir="input" pinIndex="10" vartype="logic" origName="clk_en"/>
+      <var loc="k,46,10,46,20" name="pll_bypass" dtype_id="1" dir="input" pinIndex="11" vartype="logic" origName="pll_bypass"/>
+      <var loc="k,47,10,47,19" name="async_mux" dtype_id="1" dir="input" pinIndex="12" vartype="logic" origName="async_mux"/>
+      <var loc="k,48,10,48,17" name="oram_on" dtype_id="1" dir="input" pinIndex="13" vartype="logic" origName="oram_on"/>
+      <var loc="k,49,10,49,26" name="oram_traffic_gen" dtype_id="1" dir="input" pinIndex="14" vartype="logic" origName="oram_traffic_gen"/>
+      <var loc="k,50,10,50,24" name="oram_dummy_gen" dtype_id="1" dir="input" pinIndex="15" vartype="logic" origName="oram_dummy_gen"/>
+      <var loc="k,51,11,51,19" name="pll_lock" dtype_id="1" dir="output" pinIndex="16" vartype="logic" origName="pll_lock"/>
+      <var loc="k,52,16,52,24" name="jtag_clk" dtype_id="1" dir="input" pinIndex="17" vartype="logic" origName="jtag_clk"/>
+      <var loc="k,53,16,53,26" name="jtag_rst_l" dtype_id="1" dir="input" pinIndex="18" vartype="logic" origName="jtag_rst_l"/>
+      <var loc="k,54,16,54,28" name="jtag_modesel" dtype_id="1" dir="input" pinIndex="19" vartype="logic" origName="jtag_modesel"/>
+      <var loc="k,55,16,55,27" name="jtag_datain" dtype_id="1" dir="input" pinIndex="20" vartype="logic" origName="jtag_datain"/>
+      <var loc="k,56,16,56,28" name="jtag_dataout" dtype_id="1" dir="output" pinIndex="21" vartype="logic" origName="jtag_dataout"/>
+      <var loc="k,57,34,57,48" name="intf_chip_data" dtype_id="4" dir="input" pinIndex="22" vartype="logic" origName="intf_chip_data"/>
+      <var loc="k,58,34,58,51" name="intf_chip_channel" dtype_id="3" dir="input" pinIndex="23" vartype="logic" origName="intf_chip_channel"/>
+      <var loc="k,59,34,59,55" name="intf_chip_credit_back" dtype_id="5" dir="output" pinIndex="24" vartype="logic" origName="intf_chip_credit_back"/>
+      <var loc="k,60,34,60,48" name="chip_intf_data" dtype_id="4" dir="output" pinIndex="25" vartype="logic" origName="chip_intf_data"/>
+      <var loc="k,61,34,61,51" name="chip_intf_channel" dtype_id="3" dir="output" pinIndex="26" vartype="logic" origName="chip_intf_channel"/>
+      <var loc="k,62,34,62,55" name="chip_intf_credit_back" dtype_id="5" dir="input" pinIndex="27" vartype="logic" origName="chip_intf_credit_back"/>
+      <var loc="k,64,11,64,29" name="core_ref_clk_inter" dtype_id="1" dir="output" pinIndex="28" vartype="logic" origName="core_ref_clk_inter"/>
+      <var loc="k,65,11,65,23" name="io_clk_inter" dtype_id="1" dir="output" pinIndex="29" vartype="logic" origName="io_clk_inter"/>
+      <var loc="k,66,11,66,22" name="rst_n_inter" dtype_id="1" dir="output" pinIndex="30" vartype="logic" origName="rst_n_inter"/>
+      <var loc="k,67,11,67,26" name="pll_rst_n_inter" dtype_id="1" dir="output" pinIndex="31" vartype="logic" origName="pll_rst_n_inter"/>
+      <var loc="k,68,17,68,33" name="pll_rangea_inter" dtype_id="2" dir="output" pinIndex="32" vartype="logic" origName="pll_rangea_inter"/>
+      <var loc="k,69,17,69,34" name="clk_mux_sel_inter" dtype_id="3" dir="output" pinIndex="33" vartype="logic" origName="clk_mux_sel_inter"/>
+      <var loc="k,70,11,70,23" name="clk_en_inter" dtype_id="1" dir="output" pinIndex="34" vartype="logic" origName="clk_en_inter"/>
+      <var loc="k,71,11,71,27" name="pll_bypass_inter" dtype_id="1" dir="output" pinIndex="35" vartype="logic" origName="pll_bypass_inter"/>
+      <var loc="k,72,11,72,26" name="async_mux_inter" dtype_id="1" dir="output" pinIndex="36" vartype="logic" origName="async_mux_inter"/>
+      <var loc="k,73,11,73,24" name="oram_on_inter" dtype_id="1" dir="output" pinIndex="37" vartype="logic" origName="oram_on_inter"/>
+      <var loc="k,74,11,74,33" name="oram_traffic_gen_inter" dtype_id="1" dir="output" pinIndex="38" vartype="logic" origName="oram_traffic_gen_inter"/>
+      <var loc="k,75,11,75,31" name="oram_dummy_gen_inter" dtype_id="1" dir="output" pinIndex="39" vartype="logic" origName="oram_dummy_gen_inter"/>
+      <var loc="k,76,11,76,25" name="pll_lock_inter" dtype_id="1" dir="input" pinIndex="40" vartype="logic" origName="pll_lock_inter"/>
+      <var loc="k,77,16,77,30" name="jtag_clk_inter" dtype_id="1" dir="output" pinIndex="41" vartype="logic" origName="jtag_clk_inter"/>
+      <var loc="k,78,16,78,32" name="jtag_rst_l_inter" dtype_id="1" dir="output" pinIndex="42" vartype="logic" origName="jtag_rst_l_inter"/>
+      <var loc="k,79,16,79,34" name="jtag_modesel_inter" dtype_id="1" dir="output" pinIndex="43" vartype="logic" origName="jtag_modesel_inter"/>
+      <var loc="k,80,16,80,33" name="jtag_datain_inter" dtype_id="1" dir="output" pinIndex="44" vartype="logic" origName="jtag_datain_inter"/>
+      <var loc="k,81,16,81,34" name="jtag_dataout_inter" dtype_id="1" dir="input" pinIndex="45" vartype="logic" origName="jtag_dataout_inter"/>
+      <var loc="k,82,34,82,54" name="intf_chip_data_inter" dtype_id="4" dir="output" pinIndex="46" vartype="logic" origName="intf_chip_data_inter"/>
+      <var loc="k,83,34,83,57" name="intf_chip_channel_inter" dtype_id="3" dir="output" pinIndex="47" vartype="logic" origName="intf_chip_channel_inter"/>
+      <var loc="k,84,34,84,61" name="intf_chip_credit_back_inter" dtype_id="5" dir="input" pinIndex="48" vartype="logic" origName="intf_chip_credit_back_inter"/>
+      <var loc="k,85,34,85,54" name="chip_intf_data_inter" dtype_id="4" dir="input" pinIndex="49" vartype="logic" origName="chip_intf_data_inter"/>
+      <var loc="k,86,34,86,57" name="chip_intf_channel_inter" dtype_id="3" dir="input" pinIndex="50" vartype="logic" origName="chip_intf_channel_inter"/>
+      <var loc="k,87,34,87,61" name="chip_intf_credit_back_inter" dtype_id="5" dir="output" pinIndex="51" vartype="logic" origName="chip_intf_credit_back_inter"/>
+    </module>
+    <module loc="l,2,9,2,16" name="pll_top" origName="pll_top">
+      <var loc="l,3,11,3,21" name="clk_locked" dtype_id="1" dir="output" pinIndex="1" vartype="logic" origName="clk_locked"/>
+      <var loc="l,4,11,4,18" name="clk_out" dtype_id="1" dir="output" pinIndex="2" vartype="logic" origName="clk_out"/>
+      <var loc="l,6,10,6,17" name="ref_clk" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="ref_clk"/>
+      <var loc="l,7,10,7,13" name="rst" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="rst"/>
+      <var loc="l,8,10,8,19" name="bypass_en" dtype_id="1" dir="input" pinIndex="5" vartype="logic" origName="bypass_en"/>
+      <var loc="l,9,16,9,22" name="rangeA" dtype_id="2" dir="input" pinIndex="6" vartype="logic" origName="rangeA"/>
+    </module>
+    <module loc="m,42,8,42,20" name="synchronizer" origName="synchronizer">
+      <var loc="m,51,12,51,15" name="clk" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk"/>
+      <var loc="m,52,23,52,34" name="presyncdata" dtype_id="15" dir="input" pinIndex="2" vartype="logic" origName="presyncdata"/>
+      <var loc="m,53,23,53,31" name="syncdata" dtype_id="15" dir="output" pinIndex="3" vartype="logic" origName="syncdata"/>
+      <var loc="m,49,11,49,15" name="SIZE" dtype_id="9" vartype="logic" origName="SIZE" param="true">
+        <const loc="m,49,18,49,19" name="32&apos;sh1" dtype_id="9"/>
+      </var>
+    </module>
+    <module loc="o,39,8,39,24" name="valrdy_to_credit" origName="valrdy_to_credit">
+      <var loc="o,56,7,56,10" name="clk" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk"/>
+      <var loc="o,57,7,57,12" name="reset" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="reset"/>
+      <var loc="o,60,17,60,24" name="data_in" dtype_id="7" dir="input" pinIndex="3" vartype="logic" origName="data_in"/>
+      <var loc="o,61,8,61,16" name="valid_in" dtype_id="1" dir="input" pinIndex="4" vartype="logic" origName="valid_in"/>
+      <var loc="o,66,9,66,17" name="ready_in" dtype_id="1" dir="output" pinIndex="5" vartype="logic" origName="ready_in"/>
+      <var loc="o,64,18,64,26" name="data_out" dtype_id="7" dir="output" pinIndex="6" vartype="logic" origName="data_out"/>
+      <var loc="o,65,9,65,18" name="valid_out" dtype_id="1" dir="output" pinIndex="7" vartype="logic" origName="valid_out"/>
+      <var loc="o,62,8,62,17" name="yummy_out" dtype_id="1" dir="input" pinIndex="8" vartype="logic" origName="yummy_out"/>
+      <var loc="o,53,11,53,22" name="BUFFER_SIZE" dtype_id="9" vartype="logic" origName="BUFFER_SIZE" param="true">
+        <const loc="o,53,25,53,26" name="32&apos;sh4" dtype_id="9"/>
+      </var>
+      <var loc="o,54,11,54,22" name="BUFFER_BITS" dtype_id="9" vartype="logic" origName="BUFFER_BITS" param="true">
+        <const loc="o,54,25,54,26" name="32&apos;sh3" dtype_id="9"/>
+      </var>
+    </module>
+    <module loc="n,3,8,3,12" name="tile__T2" origName="tile">
+      <var loc="n,4,16,4,25" name="TILE_TYPE" dtype_id="9" vartype="logic" origName="TILE_TYPE" param="true">
+        <const loc="f,533,19,533,20" name="32&apos;sh2" dtype_id="9"/>
+      </var>
+      <var loc="n,6,41,6,44" name="clk" dtype_id="1" dir="input" pinIndex="1" vartype="logic" origName="clk"/>
+      <var loc="n,7,41,7,46" name="rst_n" dtype_id="1" dir="input" pinIndex="2" vartype="logic" origName="rst_n"/>
+      <var loc="n,8,41,8,47" name="clk_en" dtype_id="1" dir="input" pinIndex="3" vartype="logic" origName="clk_en"/>
+      <var loc="n,9,26,9,40" name="default_chipid" dtype_id="11" dir="input" pinIndex="4" vartype="logic" origName="default_chipid"/>
+      <var loc="n,10,30,10,46" name="default_coreid_x" dtype_id="12" dir="input" pinIndex="5" vartype="logic" origName="default_coreid_x"/>
+      <var loc="n,11,30,11,46" name="default_coreid_y" dtype_id="12" dir="input" pinIndex="6" vartype="logic" origName="default_coreid_y"/>
+      <var loc="n,12,41,12,64" name="default_total_num_tiles" dtype_id="4" dir="input" pinIndex="7" vartype="logic" origName="default_total_num_tiles"/>
+      <var loc="n,13,24,13,35" name="flat_tileid" dtype_id="12" dir="input" pinIndex="8" vartype="logic" origName="flat_tileid"/>
+      <var loc="n,14,41,14,59" name="jtag_tiles_ucb_val" dtype_id="1" dir="input" pinIndex="9" vartype="logic" origName="jtag_tiles_ucb_val"/>
+      <var loc="n,15,28,15,47" name="jtag_tiles_ucb_data" dtype_id="6" dir="input" pinIndex="10" vartype="logic" origName="jtag_tiles_ucb_data"/>
+      <var loc="n,16,41,16,58" name="tile_jtag_ucb_val" dtype_id="1" dir="output" pinIndex="11" vartype="logic" origName="tile_jtag_ucb_val"/>
+      <var loc="n,17,28,17,46" name="tile_jtag_ucb_data" dtype_id="6" dir="output" pinIndex="12" vartype="logic" origName="tile_jtag_ucb_data"/>
+      <var loc="n,18,28,18,41" name="dyn0_dataIn_N" dtype_id="7" dir="input" pinIndex="13" vartype="logic" origName="dyn0_dataIn_N"/>
+      <var loc="n,19,28,19,41" name="dyn0_dataIn_E" dtype_id="7" dir="input" pinIndex="14" vartype="logic" origName="dyn0_dataIn_E"/>
+      <var loc="n,20,28,20,41" name="dyn0_dataIn_W" dtype_id="7" dir="input" pinIndex="15" vartype="logic" origName="dyn0_dataIn_W"/>
+      <var loc="n,21,28,21,41" name="dyn0_dataIn_S" dtype_id="7" dir="input" pinIndex="16" vartype="logic" origName="dyn0_dataIn_S"/>
+      <var loc="n,22,41,22,55" name="dyn0_validIn_N" dtype_id="1" dir="input" pinIndex="17" vartype="logic" origName="dyn0_validIn_N"/>
+      <var loc="n,23,41,23,55" name="dyn0_validIn_E" dtype_id="1" dir="input" pinIndex="18" vartype="logic" origName="dyn0_validIn_E"/>
+      <var loc="n,24,41,24,55" name="dyn0_validIn_W" dtype_id="1" dir="input" pinIndex="19" vartype="logic" origName="dyn0_validIn_W"/>
+      <var loc="n,25,41,25,55" name="dyn0_validIn_S" dtype_id="1" dir="input" pinIndex="20" vartype="logic" origName="dyn0_validIn_S"/>
+      <var loc="n,26,41,26,55" name="dyn0_dNo_yummy" dtype_id="1" dir="input" pinIndex="21" vartype="logic" origName="dyn0_dNo_yummy"/>
+      <var loc="n,27,41,27,55" name="dyn0_dEo_yummy" dtype_id="1" dir="input" pinIndex="22" vartype="logic" origName="dyn0_dEo_yummy"/>
+      <var loc="n,28,41,28,55" name="dyn0_dWo_yummy" dtype_id="1" dir="input" pinIndex="23" vartype="logic" origName="dyn0_dWo_yummy"/>
+      <var loc="n,29,41,29,55" name="dyn0_dSo_yummy" dtype_id="1" dir="input" pinIndex="24" vartype="logic" origName="dyn0_dSo_yummy"/>
+      <var loc="n,30,28,30,41" name="dyn1_dataIn_N" dtype_id="7" dir="input" pinIndex="25" vartype="logic" origName="dyn1_dataIn_N"/>
+      <var loc="n,31,28,31,41" name="dyn1_dataIn_E" dtype_id="7" dir="input" pinIndex="26" vartype="logic" origName="dyn1_dataIn_E"/>
+      <var loc="n,32,28,32,41" name="dyn1_dataIn_W" dtype_id="7" dir="input" pinIndex="27" vartype="logic" origName="dyn1_dataIn_W"/>
+      <var loc="n,33,28,33,41" name="dyn1_dataIn_S" dtype_id="7" dir="input" pinIndex="28" vartype="logic" origName="dyn1_dataIn_S"/>
+      <var loc="n,34,41,34,55" name="dyn1_validIn_N" dtype_id="1" dir="input" pinIndex="29" vartype="logic" origName="dyn1_validIn_N"/>
+      <var loc="n,35,41,35,55" name="dyn1_validIn_E" dtype_id="1" dir="input" pinIndex="30" vartype="logic" origName="dyn1_validIn_E"/>
+      <var loc="n,36,41,36,55" name="dyn1_validIn_W" dtype_id="1" dir="input" pinIndex="31" vartype="logic" origName="dyn1_validIn_W"/>
+      <var loc="n,37,41,37,55" name="dyn1_validIn_S" dtype_id="1" dir="input" pinIndex="32" vartype="logic" origName="dyn1_validIn_S"/>
+      <var loc="n,38,41,38,55" name="dyn1_dNo_yummy" dtype_id="1" dir="input" pinIndex="33" vartype="logic" origName="dyn1_dNo_yummy"/>
+      <var loc="n,39,41,39,55" name="dyn1_dEo_yummy" dtype_id="1" dir="input" pinIndex="34" vartype="logic" origName="dyn1_dEo_yummy"/>
+      <var loc="n,40,41,40,55" name="dyn1_dWo_yummy" dtype_id="1" dir="input" pinIndex="35" vartype="logic" origName="dyn1_dWo_yummy"/>
+      <var loc="n,41,41,41,55" name="dyn1_dSo_yummy" dtype_id="1" dir="input" pinIndex="36" vartype="logic" origName="dyn1_dSo_yummy"/>
+      <var loc="n,42,28,42,41" name="dyn2_dataIn_N" dtype_id="7" dir="input" pinIndex="37" vartype="logic" origName="dyn2_dataIn_N"/>
+      <var loc="n,43,28,43,41" name="dyn2_dataIn_E" dtype_id="7" dir="input" pinIndex="38" vartype="logic" origName="dyn2_dataIn_E"/>
+      <var loc="n,44,28,44,41" name="dyn2_dataIn_W" dtype_id="7" dir="input" pinIndex="39" vartype="logic" origName="dyn2_dataIn_W"/>
+      <var loc="n,45,28,45,41" name="dyn2_dataIn_S" dtype_id="7" dir="input" pinIndex="40" vartype="logic" origName="dyn2_dataIn_S"/>
+      <var loc="n,46,41,46,55" name="dyn2_validIn_N" dtype_id="1" dir="input" pinIndex="41" vartype="logic" origName="dyn2_validIn_N"/>
+      <var loc="n,47,41,47,55" name="dyn2_validIn_E" dtype_id="1" dir="input" pinIndex="42" vartype="logic" origName="dyn2_validIn_E"/>
+      <var loc="n,48,41,48,55" name="dyn2_validIn_W" dtype_id="1" dir="input" pinIndex="43" vartype="logic" origName="dyn2_validIn_W"/>
+      <var loc="n,49,41,49,55" name="dyn2_validIn_S" dtype_id="1" dir="input" pinIndex="44" vartype="logic" origName="dyn2_validIn_S"/>
+      <var loc="n,50,41,50,55" name="dyn2_dNo_yummy" dtype_id="1" dir="input" pinIndex="45" vartype="logic" origName="dyn2_dNo_yummy"/>
+      <var loc="n,51,41,51,55" name="dyn2_dEo_yummy" dtype_id="1" dir="input" pinIndex="46" vartype="logic" origName="dyn2_dEo_yummy"/>
+      <var loc="n,52,41,52,55" name="dyn2_dWo_yummy" dtype_id="1" dir="input" pinIndex="47" vartype="logic" origName="dyn2_dWo_yummy"/>
+      <var loc="n,53,41,53,55" name="dyn2_dSo_yummy" dtype_id="1" dir="input" pinIndex="48" vartype="logic" origName="dyn2_dSo_yummy"/>
+      <var loc="n,54,28,54,36" name="dyn0_dNo" dtype_id="7" dir="output" pinIndex="49" vartype="logic" origName="dyn0_dNo"/>
+      <var loc="n,55,28,55,36" name="dyn0_dEo" dtype_id="7" dir="output" pinIndex="50" vartype="logic" origName="dyn0_dEo"/>
+      <var loc="n,56,28,56,36" name="dyn0_dWo" dtype_id="7" dir="output" pinIndex="51" vartype="logic" origName="dyn0_dWo"/>
+      <var loc="n,57,28,57,36" name="dyn0_dSo" dtype_id="7" dir="output" pinIndex="52" vartype="logic" origName="dyn0_dSo"/>
+      <var loc="n,58,41,58,55" name="dyn0_dNo_valid" dtype_id="1" dir="output" pinIndex="53" vartype="logic" origName="dyn0_dNo_valid"/>
+      <var loc="n,59,41,59,55" name="dyn0_dEo_valid" dtype_id="1" dir="output" pinIndex="54" vartype="logic" origName="dyn0_dEo_valid"/>
+      <var loc="n,60,41,60,55" name="dyn0_dWo_valid" dtype_id="1" dir="output" pinIndex="55" vartype="logic" origName="dyn0_dWo_valid"/>
+      <var loc="n,61,41,61,55" name="dyn0_dSo_valid" dtype_id="1" dir="output" pinIndex="56" vartype="logic" origName="dyn0_dSo_valid"/>
+      <var loc="n,62,41,62,56" name="dyn0_yummyOut_N" dtype_id="1" dir="output" pinIndex="57" vartype="logic" origName="dyn0_yummyOut_N"/>
+      <var loc="n,63,41,63,56" name="dyn0_yummyOut_E" dtype_id="1" dir="output" pinIndex="58" vartype="logic" origName="dyn0_yummyOut_E"/>
+      <var loc="n,64,41,64,56" name="dyn0_yummyOut_W" dtype_id="1" dir="output" pinIndex="59" vartype="logic" origName="dyn0_yummyOut_W"/>
+      <var loc="n,65,41,65,56" name="dyn0_yummyOut_S" dtype_id="1" dir="output" pinIndex="60" vartype="logic" origName="dyn0_yummyOut_S"/>
+      <var loc="n,66,28,66,36" name="dyn1_dNo" dtype_id="7" dir="output" pinIndex="61" vartype="logic" origName="dyn1_dNo"/>
+      <var loc="n,67,28,67,36" name="dyn1_dEo" dtype_id="7" dir="output" pinIndex="62" vartype="logic" origName="dyn1_dEo"/>
+      <var loc="n,68,28,68,36" name="dyn1_dWo" dtype_id="7" dir="output" pinIndex="63" vartype="logic" origName="dyn1_dWo"/>
+      <var loc="n,69,28,69,36" name="dyn1_dSo" dtype_id="7" dir="output" pinIndex="64" vartype="logic" origName="dyn1_dSo"/>
+      <var loc="n,70,41,70,55" name="dyn1_dNo_valid" dtype_id="1" dir="output" pinIndex="65" vartype="logic" origName="dyn1_dNo_valid"/>
+      <var loc="n,71,41,71,55" name="dyn1_dEo_valid" dtype_id="1" dir="output" pinIndex="66" vartype="logic" origName="dyn1_dEo_valid"/>
+      <var loc="n,72,41,72,55" name="dyn1_dWo_valid" dtype_id="1" dir="output" pinIndex="67" vartype="logic" origName="dyn1_dWo_valid"/>
+      <var loc="n,73,41,73,55" name="dyn1_dSo_valid" dtype_id="1" dir="output" pinIndex="68" vartype="logic" origName="dyn1_dSo_valid"/>
+      <var loc="n,74,41,74,56" name="dyn1_yummyOut_N" dtype_id="1" dir="output" pinIndex="69" vartype="logic" origName="dyn1_yummyOut_N"/>
+      <var loc="n,75,41,75,56" name="dyn1_yummyOut_E" dtype_id="1" dir="output" pinIndex="70" vartype="logic" origName="dyn1_yummyOut_E"/>
+      <var loc="n,76,41,76,56" name="dyn1_yummyOut_W" dtype_id="1" dir="output" pinIndex="71" vartype="logic" origName="dyn1_yummyOut_W"/>
+      <var loc="n,77,41,77,56" name="dyn1_yummyOut_S" dtype_id="1" dir="output" pinIndex="72" vartype="logic" origName="dyn1_yummyOut_S"/>
+      <var loc="n,78,28,78,36" name="dyn2_dNo" dtype_id="7" dir="output" pinIndex="73" vartype="logic" origName="dyn2_dNo"/>
+      <var loc="n,79,28,79,36" name="dyn2_dEo" dtype_id="7" dir="output" pinIndex="74" vartype="logic" origName="dyn2_dEo"/>
+      <var loc="n,80,28,80,36" name="dyn2_dWo" dtype_id="7" dir="output" pinIndex="75" vartype="logic" origName="dyn2_dWo"/>
+      <var loc="n,81,28,81,36" name="dyn2_dSo" dtype_id="7" dir="output" pinIndex="76" vartype="logic" origName="dyn2_dSo"/>
+      <var loc="n,82,41,82,55" name="dyn2_dNo_valid" dtype_id="1" dir="output" pinIndex="77" vartype="logic" origName="dyn2_dNo_valid"/>
+      <var loc="n,83,41,83,55" name="dyn2_dEo_valid" dtype_id="1" dir="output" pinIndex="78" vartype="logic" origName="dyn2_dEo_valid"/>
+      <var loc="n,84,41,84,55" name="dyn2_dWo_valid" dtype_id="1" dir="output" pinIndex="79" vartype="logic" origName="dyn2_dWo_valid"/>
+      <var loc="n,85,41,85,55" name="dyn2_dSo_valid" dtype_id="1" dir="output" pinIndex="80" vartype="logic" origName="dyn2_dSo_valid"/>
+      <var loc="n,86,41,86,56" name="dyn2_yummyOut_N" dtype_id="1" dir="output" pinIndex="81" vartype="logic" origName="dyn2_yummyOut_N"/>
+      <var loc="n,87,41,87,56" name="dyn2_yummyOut_E" dtype_id="1" dir="output" pinIndex="82" vartype="logic" origName="dyn2_yummyOut_E"/>
+      <var loc="n,88,41,88,56" name="dyn2_yummyOut_W" dtype_id="1" dir="output" pinIndex="83" vartype="logic" origName="dyn2_yummyOut_W"/>
+      <var loc="n,89,41,89,56" name="dyn2_yummyOut_S" dtype_id="1" dir="output" pinIndex="84" vartype="logic" origName="dyn2_yummyOut_S"/>
+      <var loc="n,90,41,90,52" name="debug_req_i" dtype_id="1" dir="input" pinIndex="85" vartype="logic" origName="debug_req_i"/>
+      <var loc="n,91,41,91,54" name="unavailable_o" dtype_id="1" dir="output" pinIndex="86" vartype="logic" origName="unavailable_o"/>
+      <var loc="n,92,41,92,52" name="timer_irq_i" dtype_id="1" dir="input" pinIndex="87" vartype="logic" origName="timer_irq_i"/>
+      <var loc="n,93,41,93,46" name="ipi_i" dtype_id="1" dir="input" pinIndex="88" vartype="logic" origName="ipi_i"/>
+      <var loc="n,94,41,94,46" name="irq_i" dtype_id="3" dir="input" pinIndex="89" vartype="logic" origName="irq_i"/>
+    </module>
+    <typetable loc="a,0,0,0,0">
+      <basicdtype loc="d,53,22,53,24" id="1" name="logic"/>
+      <voiddtype loc="d,54,21,54,30" id="16"/>
+      <basicdtype loc="f,538,34,538,39" id="11" name="logic" left="13" right="0"/>
+      <basicdtype loc="f,539,34,539,38" id="12" name="logic" left="7" right="0"/>
+      <basicdtype loc="m,52,12,52,13" id="15" name="logic" left="0" right="0"/>
+      <basicdtype loc="f,26,11,26,12" id="2" name="logic" left="4" right="0"/>
+      <basicdtype loc="f,27,11,27,12" id="3" name="logic" left="1" right="0"/>
+      <basicdtype loc="f,37,11,37,12" id="4" name="logic" left="31" right="0"/>
+      <basicdtype loc="f,39,11,39,12" id="5" name="logic" left="2" right="0"/>
+      <basicdtype loc="f,48,13,48,14" id="6" name="logic" left="3" right="0"/>
+      <basicdtype loc="f,87,9,87,10" id="7" name="logic" left="63" right="0"/>
+      <basicdtype loc="f,148,9,148,10" id="8" name="logic" left="127" right="0"/>
+      <basicdtype loc="f,537,43,537,44" id="10" name="logic" left="6" right="0" signed="true"/>
+      <basicdtype loc="f,543,40,543,41" id="13" name="logic" signed="true"/>
+      <basicdtype loc="f,547,34,547,35" id="14" name="logic" left="1" right="0" signed="true"/>
+      <basicdtype loc="f,278,42,278,43" id="9" name="logic" left="31" right="0" signed="true"/>
+    </typetable>
+  </netlist>
+</verilator_xml>

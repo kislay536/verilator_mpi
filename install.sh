@@ -15,6 +15,7 @@ if command -v verilator &> /dev/null; then
     # Remove manually installed verilator if in /usr/local/bin
     if [[ -f "$INSTALL_PREFIX/bin/verilator" ]]; then
         sudo rm -f "$INSTALL_PREFIX/bin/verilator"
+        echo "Verilator Removed!!!"
     fi
 fi
 

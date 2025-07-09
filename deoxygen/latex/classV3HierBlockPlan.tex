@@ -1,0 +1,56 @@
+\doxysection{V3\+Hier\+Block\+Plan Class Reference}
+\hypertarget{classV3HierBlockPlan}{}\label{classV3HierBlockPlan}\index{V3HierBlockPlan@{V3HierBlockPlan}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classV3HierBlockPlan_a94e14b64e729e231401075d247c7e928}\label{classV3HierBlockPlan_a94e14b64e729e231401075d247c7e928} 
+using {\bfseries iterator} = Hier\+Map\+::iterator
+\item 
+\Hypertarget{classV3HierBlockPlan_acd3a532b9e140224f39813c910224f1d}\label{classV3HierBlockPlan_acd3a532b9e140224f39813c910224f1d} 
+using {\bfseries const\+\_\+iterator} = Hier\+Map\+::const\+\_\+iterator
+\item 
+\Hypertarget{classV3HierBlockPlan_abef2e75229e5e2c4bf5216386f84f0fb}\label{classV3HierBlockPlan_abef2e75229e5e2c4bf5216386f84f0fb} 
+using {\bfseries Hier\+Vector} = std\+::vector$<$ const \mbox{\hyperlink{classV3HierBlock}{V3\+Hier\+Block}} \texorpdfstring{$\ast$}{*} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classV3HierBlockPlan_a46a54009ed79f94cc3ca4a85afea0a84}\label{classV3HierBlockPlan_a46a54009ed79f94cc3ca4a85afea0a84} 
+void {\bfseries add} (const Ast\+Node\+Module \texorpdfstring{$\ast$}{*}modp, const \mbox{\hyperlink{classV3HierBlockParams}{V3\+Hier\+Block\+Params}} \&params) VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlockPlan_af1d1732fe2f636ecae490cb956525535}\label{classV3HierBlockPlan_af1d1732fe2f636ecae490cb956525535} 
+void {\bfseries register\+Usage} (const Ast\+Node\+Module \texorpdfstring{$\ast$}{*}parentp, const Ast\+Node\+Module \texorpdfstring{$\ast$}{*}childp) VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlockPlan_a67dfcdc44679c2b0d265172b2eee8c1d}\label{classV3HierBlockPlan_a67dfcdc44679c2b0d265172b2eee8c1d} 
+const\+\_\+iterator {\bfseries begin} () const
+\item 
+\Hypertarget{classV3HierBlockPlan_a8d211d2d34d0817e83818efeb2e8d250}\label{classV3HierBlockPlan_a8d211d2d34d0817e83818efeb2e8d250} 
+const\+\_\+iterator {\bfseries end} () const
+\item 
+\Hypertarget{classV3HierBlockPlan_af32ffbb95e8d202daefe898afb026daa}\label{classV3HierBlockPlan_af32ffbb95e8d202daefe898afb026daa} 
+bool {\bfseries empty} () const
+\item 
+\Hypertarget{classV3HierBlockPlan_a2ae3e5865966f1bb0d31cb9bd721db80}\label{classV3HierBlockPlan_a2ae3e5865966f1bb0d31cb9bd721db80} 
+Hier\+Vector {\bfseries hier\+Blocks\+Sorted} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlockPlan_a10b9134686fc6a7a95cebb5417642d19}\label{classV3HierBlockPlan_a10b9134686fc6a7a95cebb5417642d19} 
+void {\bfseries write\+Command\+Args\+Files} (bool for\+CMake) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlockPlan_aa84d02afaf810330610303e601fb8077}\label{classV3HierBlockPlan_aa84d02afaf810330610303e601fb8077} 
+void {\bfseries write\+Parameters\+Files} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classV3HierBlockPlan_a6045a8196ed10fccc658deefe1fc5702}\label{classV3HierBlockPlan_a6045a8196ed10fccc658deefe1fc5702} 
+static string {\bfseries top\+Command\+Args\+Filename} (bool for\+CMake) VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlockPlan_aa9b52e46148de605a321434c5bac9046}\label{classV3HierBlockPlan_aa9b52e46148de605a321434c5bac9046} 
+static void {\bfseries create\+Plan} (Ast\+Netlist \texorpdfstring{$\ast$}{*}nodep) VL\+\_\+\+MT\+\_\+\+DISABLED
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/V3\+Hier\+Block.\+h\item 
+src/V3\+Hier\+Block.\+cpp\end{DoxyCompactItemize}

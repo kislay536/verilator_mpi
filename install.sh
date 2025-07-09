@@ -23,7 +23,7 @@ fi
 echo "Bootstrapping and building Verilator..."
 autoconf
 ./configure --prefix="$INSTALL_PREFIX"
-make -j"$NUM_CORES"
+make -j"$NUM_CORES" > make.log 2>&1
 
 echo "Installing Verilator to $INSTALL_PREFIX..."
 sudo make install

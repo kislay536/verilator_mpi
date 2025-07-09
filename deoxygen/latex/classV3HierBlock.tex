@@ -1,0 +1,83 @@
+\doxysection{V3\+Hier\+Block Class Reference}
+\hypertarget{classV3HierBlock}{}\label{classV3HierBlock}\index{V3HierBlock@{V3HierBlock}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classV3HierBlock_a916f03307bfc549890f9ccb48218f4bf}\label{classV3HierBlock_a916f03307bfc549890f9ccb48218f4bf} 
+using {\bfseries Hier\+Block\+Set} = std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classV3HierBlock}{V3\+Hier\+Block}} \texorpdfstring{$\ast$}{*} $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classV3HierBlock_aca36fa4e514eec59994d19e5f603cd05}\label{classV3HierBlock_aca36fa4e514eec59994d19e5f603cd05} 
+{\bfseries V3\+Hier\+Block} (const Ast\+Node\+Module \texorpdfstring{$\ast$}{*}modp, const \mbox{\hyperlink{classV3HierBlockParams}{V3\+Hier\+Block\+Params}} \&params)
+\item 
+\Hypertarget{classV3HierBlock_a855a0e24724285a4c1c0e2b0130e8445}\label{classV3HierBlock_a855a0e24724285a4c1c0e2b0130e8445} 
+void {\bfseries add\+Parent} (\mbox{\hyperlink{classV3HierBlock}{V3\+Hier\+Block}} \texorpdfstring{$\ast$}{*}parentp)
+\item 
+\Hypertarget{classV3HierBlock_a38d2946086d1912d5f5ba2158a1291ea}\label{classV3HierBlock_a38d2946086d1912d5f5ba2158a1291ea} 
+bool {\bfseries has\+Parent} () const
+\item 
+\Hypertarget{classV3HierBlock_a32e3e6452c9534e8f14de63da0d1230e}\label{classV3HierBlock_a32e3e6452c9534e8f14de63da0d1230e} 
+void {\bfseries add\+Child} (\mbox{\hyperlink{classV3HierBlock}{V3\+Hier\+Block}} \texorpdfstring{$\ast$}{*}childp)
+\item 
+\Hypertarget{classV3HierBlock_a18705826ec0a8b43c11f7874f139b40e}\label{classV3HierBlock_a18705826ec0a8b43c11f7874f139b40e} 
+bool {\bfseries has\+Child} () const
+\item 
+\Hypertarget{classV3HierBlock_a476dfe070ab3dcaa88bfff588bf686cf}\label{classV3HierBlock_a476dfe070ab3dcaa88bfff588bf686cf} 
+const Hier\+Block\+Set \& {\bfseries parents} () const
+\item 
+\Hypertarget{classV3HierBlock_aba96fe640753c7fe1bd53bac8bcfbbef}\label{classV3HierBlock_aba96fe640753c7fe1bd53bac8bcfbbef} 
+const Hier\+Block\+Set \& {\bfseries children} () const
+\item 
+\Hypertarget{classV3HierBlock_ac0a0421ccca1d338cb19d7a860bb1446}\label{classV3HierBlock_ac0a0421ccca1d338cb19d7a860bb1446} 
+const \mbox{\hyperlink{classV3HierBlockParams}{V3\+Hier\+Block\+Params}} \& {\bfseries params} () const
+\item 
+\Hypertarget{classV3HierBlock_a5fa164b0594ae80ebbe127e2b63c628e}\label{classV3HierBlock_a5fa164b0594ae80ebbe127e2b63c628e} 
+const Ast\+Node\+Module \texorpdfstring{$\ast$}{*} {\bfseries modp} () const
+\item 
+\Hypertarget{classV3HierBlock_a81b4838f703045ba85e5ac0bb06bd582}\label{classV3HierBlock_a81b4838f703045ba85e5ac0bb06bd582} 
+V3\+String\+List {\bfseries command\+Args} (bool for\+CMake) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a06b2a481423af92477efb45ed8909533}\label{classV3HierBlock_a06b2a481423af92477efb45ed8909533} 
+V3\+String\+List {\bfseries hier\+Block\+Args} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a2688f7786b5c2a4ef98b9927069f4120}\label{classV3HierBlock_a2688f7786b5c2a4ef98b9927069f4120} 
+string {\bfseries hier\+Prefix} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a317ce1dcfd387055b7821d542855b9b2}\label{classV3HierBlock_a317ce1dcfd387055b7821d542855b9b2} 
+string {\bfseries hier\+Some\+Filename} (bool with\+Dir, const char \texorpdfstring{$\ast$}{*}prefix, const char \texorpdfstring{$\ast$}{*}suffix) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a57a65eec28b2ceea648a4678966c00ec}\label{classV3HierBlock_a57a65eec28b2ceea648a4678966c00ec} 
+string {\bfseries hier\+Wrapper\+Filename} (bool with\+Dir) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a979db32f01c89d9957fa469809149212}\label{classV3HierBlock_a979db32f01c89d9957fa469809149212} 
+string {\bfseries hier\+Mk\+Filename} (bool with\+Dir) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a2ff05f5573169aec030a4431ae6250ad}\label{classV3HierBlock_a2ff05f5573169aec030a4431ae6250ad} 
+string {\bfseries hier\+Lib\+Filename} (bool with\+Dir) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a950a6457ddc50ff5a1e0fd799e0887d7}\label{classV3HierBlock_a950a6457ddc50ff5a1e0fd799e0887d7} 
+string {\bfseries hier\+Generated\+Filenames} (bool with\+Dir) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a0c93561bd73b5b629bcfa1d704ce0ae0}\label{classV3HierBlock_a0c93561bd73b5b629bcfa1d704ce0ae0} 
+string {\bfseries v\+File\+If\+Necessary} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_aa6bc9a5a8d5e7954f00b21cedcfdd003}\label{classV3HierBlock_aa6bc9a5a8d5e7954f00b21cedcfdd003} 
+void {\bfseries write\+Command\+Args\+File} (bool for\+CMake) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_ab63bfb6a4bbb86c29100be7c241ee33d}\label{classV3HierBlock_ab63bfb6a4bbb86c29100be7c241ee33d} 
+void {\bfseries write\+Parameters\+File} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a929b86836e9ef266b16567504aa2f8a3}\label{classV3HierBlock_a929b86836e9ef266b16567504aa2f8a3} 
+string {\bfseries command\+Args\+Filename} (bool for\+CMake) const VL\+\_\+\+MT\+\_\+\+DISABLED
+\item 
+\Hypertarget{classV3HierBlock_a6bd03ea1f88d9ed02383751a0707ec05}\label{classV3HierBlock_a6bd03ea1f88d9ed02383751a0707ec05} 
+string {\bfseries type\+Parameters\+Filename} () const VL\+\_\+\+MT\+\_\+\+DISABLED
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/V3\+Hier\+Block.\+h\item 
+src/V3\+Hier\+Block.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,162 @@
+\doxysection{V3\+Hier\+Block.\+h}
+\hypertarget{V3HierBlock_8h_source}{}\label{V3HierBlock_8h_source}\index{src/V3HierBlock.h@{src/V3HierBlock.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ -\/*-\/\ mode:\ C++;\ c-\/file-\/style:\ "{}cc-\/mode"{}\ -\/*-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//*************************************************************************}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ DESCRIPTION:\ Verilator:\ Plan\ for\ Hierarchical\ Verilation}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Code\ available\ from:\ https://verilator.org}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//*************************************************************************}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Copyright\ 2003-\/2025\ by\ Wilson\ Snyder.\ This\ program\ is\ free\ software;\ you}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ can\ redistribute\ it\ and/or\ modify\ it\ under\ the\ terms\ of\ either\ the\ GNU}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Lesser\ General\ Public\ License\ Version\ 3\ or\ the\ Perl\ Artistic\ License}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Version\ 2.0.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ SPDX-\/License-\/Identifier:\ LGPL-\/3.0-\/only\ OR\ Artistic-\/2.0}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//*************************************************************************}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ VERILATOR\_V3HIERBLOCK\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ VERILATOR\_V3HIERBLOCK\_H\_}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}verilatedos.h"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}V3Options.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }AstNetlist;}
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }AstNodeModule;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }AstParamTypeDType;}
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }AstVar;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\ final\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{using\ }GParams\ =\ std::vector<AstVar*>;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{using\ }GTypeParams\ =\ std::vector<AstParamTypeDType*>;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ GParams\ m\_params;}
+\DoxyCodeLine{00046\ \ \ \ \ GTypeParams\ m\_typeParams;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ add(AstVar*\ param)\ \{\ m\_params.push\_back(param);\ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ add(AstParamTypeDType*\ param)\ \{\ m\_typeParams.push\_back(param);\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ GParams\&\ gparams()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_params;\ \};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ GTypeParams\&\ gTypeParams()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_typeParams;\ \};}
+\DoxyCodeLine{00054\ \ \ \ \ GParams\&\ gparams()\ \{\ \textcolor{keywordflow}{return}\ m\_params;\ \};}
+\DoxyCodeLine{00055\ \ \ \ \ GTypeParams\&\ gTypeParams()\ \{\ \textcolor{keywordflow}{return}\ m\_typeParams;\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ swap(\mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\&\ other)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ m\_params.swap(other.m\_params);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ m\_typeParams.swap(other.m\_typeParams);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classV3HierBlock}{V3HierBlock}}\ final\ \{}
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{using\ }HierBlockSet\ =\ std::unordered\_set<V3HierBlock*>;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ TYPES}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Parameter\ name,\ stringified\ value}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{using\ }StrGParam\ =\ std::pair<string,\ string>;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{using\ }StrGParams\ =\ std::vector<StrGParam>;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ MEMBERS}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{const}\ AstNodeModule*\ \textcolor{keyword}{const}\ m\_modp;\ \ \textcolor{comment}{//\ Hierarchical\ block\ module}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Hierarchical\ blocks\ that\ directly\ or\ indirectly\ instantiate\ this\ block}}
+\DoxyCodeLine{00076\ \ \ \ \ HierBlockSet\ m\_parents;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Hierarchical\ blocks\ that\ this\ block\ directly\ or\ indirectly\ instantiates}}
+\DoxyCodeLine{00078\ \ \ \ \ HierBlockSet\ m\_children;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ Parameters\ that\ are\ overridden\ by\ \#(.param(value))\ syntax.}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\ m\_params;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ METHODS}}
+\DoxyCodeLine{00083\ \ \ \ \ VL\_UNCOPYABLE(\mbox{\hyperlink{classV3HierBlock}{V3HierBlock}});}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ StrGParams\ stringifyParams(\textcolor{keyword}{const}\ V3HierBlockParams::GParams\&\ params,}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ forGOption)\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classV3HierBlock}{V3HierBlock}}(\textcolor{keyword}{const}\ AstNodeModule*\ modp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\&\ params)}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ :\ m\_modp\{modp\}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ ,\ m\_params\{params\}\ \{\}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{classV3HierBlock}{\string~V3HierBlock}}()\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ addParent(\mbox{\hyperlink{classV3HierBlock}{V3HierBlock}}*\ parentp)\ \{\ m\_parents.insert(parentp);\ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasParent()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !m\_parents.empty();\ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ addChild(\mbox{\hyperlink{classV3HierBlock}{V3HierBlock}}*\ childp)\ \{\ m\_children.insert(childp);\ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasChild()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ !m\_children.empty();\ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{const}\ HierBlockSet\&\ parents()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_parents;\ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{const}\ HierBlockSet\&\ children()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_children;\ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\&\ params()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_params;\ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{const}\ AstNodeModule*\ modp()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_modp;\ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ For\ emitting\ Makefile\ and\ CMakeLists.txt}}
+\DoxyCodeLine{00104\ \ \ \ \ V3StringList\ commandArgs(\textcolor{keywordtype}{bool}\ forCMake)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00105\ \ \ \ \ V3StringList\ hierBlockArgs()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{string}\ hierPrefix()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{string}\ hierSomeFilename(\textcolor{keywordtype}{bool}\ withDir,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ prefix,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ suffix)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{string}\ hierWrapperFilename(\textcolor{keywordtype}{bool}\ withDir)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{string}\ hierMkFilename(\textcolor{keywordtype}{bool}\ withDir)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{string}\ hierLibFilename(\textcolor{keywordtype}{bool}\ withDir)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{string}\ hierGeneratedFilenames(\textcolor{keywordtype}{bool}\ withDir)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ Returns\ the\ original\ HDL\ file\ if\ it\ is\ not\ included\ in\ v3Global.opt.vFiles().}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{string}\ vFileIfNecessary()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//\ Write\ command\ line\ arguments\ to\ .f\ file\ for\ this\ hierarchical\ block}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ writeCommandArgsFile(\textcolor{keywordtype}{bool}\ forCMake)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ writeParametersFile()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{string}\ commandArgsFilename(\textcolor{keywordtype}{bool}\ forCMake)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{string}\ typeParametersFilename()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{comment}{//\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{comment}{//\ Holds\ relationship\ between\ AstNodeModule\ and\ V3HierBlock}}
+\DoxyCodeLine{00125\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classV3HierBlockPlan}{V3HierBlockPlan}}\ final\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keyword}{using\ }HierMap\ =\ std::unordered\_map<const\ AstNodeModule*,\ V3HierBlock*>;}
+\DoxyCodeLine{00127\ \ \ \ \ HierMap\ m\_blocks;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classV3HierBlockPlan}{V3HierBlockPlan}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00130\ \ \ \ \ VL\_UNCOPYABLE(\mbox{\hyperlink{classV3HierBlockPlan}{V3HierBlockPlan}});}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{using\ }iterator\ =\ HierMap::iterator;}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keyword}{using\ }const\_iterator\ =\ HierMap::const\_iterator;}
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keyword}{using\ }HierVector\ =\ std::vector<const\ V3HierBlock*>;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ add(\textcolor{keyword}{const}\ AstNodeModule*\ modp,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classV3HierBlockParams}{V3HierBlockParams}}\&\ params)\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ registerUsage(\textcolor{keyword}{const}\ AstNodeModule*\ parentp,\ \textcolor{keyword}{const}\ AstNodeModule*\ childp)\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ const\_iterator\ begin()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_blocks.begin();\ \}}
+\DoxyCodeLine{00141\ \ \ \ \ const\_iterator\ end()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_blocks.end();\ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{bool}\ empty()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_blocks.empty();\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ Returns\ all\ hierarchical\ blocks\ that\ sorted\ in\ leaf-\/first\ order.}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{comment}{//\ Latter\ block\ refers\ only\ already\ appeared\ hierarchical\ blocks.}}
+\DoxyCodeLine{00146\ \ \ \ \ HierVector\ hierBlocksSorted()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ Write\ command\ line\ arguments\ to\ .f\ files\ for\ child\ Verilation\ run}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{void}\ writeCommandArgsFiles(\textcolor{keywordtype}{bool}\ forCMake)\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordtype}{void}\ writeParametersFiles()\ \textcolor{keyword}{const}\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ topCommandArgsFilename(\textcolor{keywordtype}{bool}\ forCMake)\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ createPlan(AstNetlist*\ nodep)\ VL\_MT\_DISABLED;}
+\DoxyCodeLine{00154\ \};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ guard}}
+
+\end{DoxyCode}

@@ -4,7 +4,7 @@ TOP = Vaes_main
 
 # If 'flag' is set, prefix with '-- ', otherwise empty
 ifdef flag
-    FLAGS := --$(flag)
+    FLAGS := 
 else
     FLAGS := --hierarchical
 endif
@@ -14,7 +14,9 @@ xml:
 
 elaborate:
 	@echo "Running elaboration $(if $(flag),with flags: $(flag),without extra flags)..."
-	@verilator -Wall --cc $(SRC_FILES) --exe sim_main.cpp --Wno-fatal $(FLAGS)
+	@verilator --cc $(SRC_FILES) --exe sim_main.cpp --Wno-fatal $(FLAGS)
+
+# -Wall shows all kind of warnings
 
 build:
 	@echo "Building $(if $(flag),with flags: $(flag),without extra flags)..."
@@ -27,3 +29,4 @@ simulate:
 clean:
 	@echo "Cleaning build files..."
 	@rm -rf $(OBJ_DIR) $(TOP)
+	@clear

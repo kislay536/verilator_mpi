@@ -1,6 +1,0 @@
-digraph G {
-  "$root" -> "$root.top";
-  "$root.top" -> "$root.top.c";
-  "$root.top.c" -> "$root.top.c.u1";
-  "$root.top.c" -> "$root.top.c.rf";
-}

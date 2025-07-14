@@ -1,40 +1,34 @@
 ------------------------------------------------------------
 making verilator in src
 make -C src 
-make[1]: Entering directory '/home/kislay/verilator_mpi/src'
+make[1]: Entering directory '/home/kislay/verilator/src'
 make -C obj_dbg -j 1  TGT=../../bin/verilator_bin_dbg VL_DEBUG=1 -f ../Makefile_obj serial
 make -C obj_dbg       TGT=../../bin/verilator_coverage_bin_dbg VL_DEBUG=1 VL_VLCOV=1 -f ../Makefile_obj serial_vlcov
 make -C obj_opt -j 1  TGT=../../bin/verilator_bin -f ../Makefile_obj serial
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_dbg'
+make[2]: Entering directory '/home/kislay/verilator/src/obj_dbg'
 make[2]: warning: -j1 forced in submake: resetting jobserver mode.
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_opt'
+make[2]: Entering directory '/home/kislay/verilator/src/obj_opt'
 make[2]: warning: -j1 forced in submake: resetting jobserver mode.
 make[2]: Nothing to be done for 'serial'.
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_dbg'
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_dbg'
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_opt'
+make -C obj_opt       TGT=../../bin/verilator_bin -f ../Makefile_obj
+make[2]: Entering directory '/home/kislay/verilator/src/obj_dbg'
 make[2]: Nothing to be done for 'serial_vlcov'.
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_dbg'
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_dbg'
+make[2]: Nothing to be done for 'serial'.
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_dbg'
 make -C obj_dbg       TGT=../../bin/verilator_bin_dbg VL_DEBUG=1 -f ../Makefile_obj
 make -C obj_dbg       TGT=../../bin/verilator_coverage_bin_dbg VL_DEBUG=1 VL_VLCOV=1 -f ../Makefile_obj
-make[2]: Nothing to be done for 'serial'.
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_opt'
-make -C obj_opt       TGT=../../bin/verilator_bin -f ../Makefile_obj
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_dbg'
-      Compile flags:  g++ -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC="" -DDEFENV_SYSTEMC_ARCH="" -DDEFENV_SYSTEMC_INCLUDE="" -DDEFENV_SYSTEMC_LIBDIR="" -DDEFENV_VERILATOR_ROOT="/usr/local/share/verilator"
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_dbg'
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_dbg'
-ccache g++  -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/usr/local/share/verilator\" -c ../Verilator.cpp -o Verilator.o
-make[2]: Entering directory '/home/kislay/verilator_mpi/src/obj_opt'
-ccache g++  -O3 -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP  -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC=\"\" -DDEFENV_SYSTEMC_ARCH=\"\" -DDEFENV_SYSTEMC_INCLUDE=\"\" -DDEFENV_SYSTEMC_LIBDIR=\"\" -DDEFENV_VERILATOR_ROOT=\"/usr/local/share/verilator\" -c ../Verilator.cpp -o Verilator.o
-      Compile flags:  g++ -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC="" -DDEFENV_SYSTEMC_ARCH="" -DDEFENV_SYSTEMC_INCLUDE="" -DDEFENV_SYSTEMC_LIBDIR="" -DDEFENV_VERILATOR_ROOT="/usr/local/share/verilator"
+make[2]: Entering directory '/home/kislay/verilator/src/obj_opt'
       Compile flags:  g++ -O3 -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC="" -DDEFENV_SYSTEMC_ARCH="" -DDEFENV_SYSTEMC_INCLUDE="" -DDEFENV_SYSTEMC_LIBDIR="" -DDEFENV_VERILATOR_ROOT="/usr/local/share/verilator"
-      Linking ../../bin/verilator_bin...
-g++ -static-libgcc -static-libstdc++ -Xlinker -gc-sections -o ../../bin/verilator_bin V3Const__gen.o V3Error.o V3FileLine.o V3Graph.o V3GraphAcyc.o V3GraphAlg.o V3GraphPathChecker.o V3GraphTest.o V3Hash.o V3OptionParser.o V3Os.o V3ParseGrammar.o V3ParseImp.o V3ParseLex.o V3PreProc.o V3PreShell.o V3String.o V3ThreadPool.o V3Waiver.o Verilator.o  V3Ast.o V3AstNodes.o V3Broken.o V3Config.o V3EmitCBase.o V3EmitCConstPool.o V3EmitCFunc.o V3EmitCHeaders.o V3EmitCImp.o V3EmitCInlines.o V3EmitCPch.o V3EmitV.o V3File.o V3FuncOpt.o V3Global.o V3Hasher.o V3Number.o V3Options.o V3Stats.o V3StatsReport.o V3VariableOrder.o  V3Active.o V3ActiveTop.o V3Assert.o V3AssertPre.o V3Begin.o V3Branch.o V3CCtors.o V3CUse.o V3Case.o V3Cast.o V3Class.o V3Clean.o V3Clock.o V3Combine.o V3Common.o V3Coverage.o V3CoverageJoin.o V3Dead.o V3Delayed.o V3Depth.o V3DepthBlock.o V3Descope.o V3Dfg.o V3DfgAstToDfg.o V3DfgCache.o V3DfgDecomposition.o V3DfgDfgToAst.o V3DfgOptimizer.o V3DfgPasses.o V3DfgPeephole.o V3DfgRegularize.o V3DupFinder.o V3EmitCMain.o V3EmitCMake.o V3EmitCModel.o V3EmitCSyms.o V3EmitMk.o V3EmitMkJson.o V3EmitXml.o V3ExecGraph.o V3Expand.o V3Force.o V3Fork.o V3Gate.o V3HierBlock.o V3Inline.o V3Inst.o V3InstrCount.o V3Interface.o V3Life.o V3LifePost.o V3LinkCells.o V3LinkDot.o V3LinkInc.o V3LinkJump.o V3LinkLValue.o V3LinkLevel.o V3LinkParse.o V3LinkResolve.o V3Localize.o V3MergeCond.o V3Name.o V3Order.o V3OrderGraphBuilder.o V3OrderMoveGraph.o V3OrderParallel.o V3OrderProcessDomains.o V3OrderSerial.o V3Param.o V3Premit.o V3ProtectLib.o V3Randomize.o V3Reloop.o V3Sampled.o V3Sched.o V3SchedAcyclic.o V3SchedPartition.o V3SchedReplicate.o V3SchedTiming.o V3SchedVirtIface.o V3Scope.o V3Scoreboard.o V3Slice.o V3Split.o V3SplitAs.o V3SplitVar.o V3StackCount.o V3Subst.o V3TSP.o V3Table.o V3Task.o V3Timing.o V3Trace.o V3TraceDecl.o V3Tristate.o V3Udp.o V3Undriven.o V3Unknown.o V3Unroll.o V3Width.o V3WidthCommit.o V3WidthSel.o   -Wl,--whole-archive -l:libtcmalloc_minimal.a -Wl,--no-whole-archive -lsodium  -lpthread -latomic -lm
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_opt'
-      Linking ../../bin/verilator_bin_dbg...
-g++ -gz -static-libgcc -static-libstdc++ -Xlinker -gc-sections -o ../../bin/verilator_bin_dbg V3Const__gen.o V3Error.o V3FileLine.o V3Graph.o V3GraphAcyc.o V3GraphAlg.o V3GraphPathChecker.o V3GraphTest.o V3Hash.o V3OptionParser.o V3Os.o V3ParseGrammar.o V3ParseImp.o V3ParseLex.o V3PreProc.o V3PreShell.o V3String.o V3ThreadPool.o V3Waiver.o Verilator.o  V3Ast.o V3AstNodes.o V3Broken.o V3Config.o V3EmitCBase.o V3EmitCConstPool.o V3EmitCFunc.o V3EmitCHeaders.o V3EmitCImp.o V3EmitCInlines.o V3EmitCPch.o V3EmitV.o V3File.o V3FuncOpt.o V3Global.o V3Hasher.o V3Number.o V3Options.o V3Stats.o V3StatsReport.o V3VariableOrder.o  V3Active.o V3ActiveTop.o V3Assert.o V3AssertPre.o V3Begin.o V3Branch.o V3CCtors.o V3CUse.o V3Case.o V3Cast.o V3Class.o V3Clean.o V3Clock.o V3Combine.o V3Common.o V3Coverage.o V3CoverageJoin.o V3Dead.o V3Delayed.o V3Depth.o V3DepthBlock.o V3Descope.o V3Dfg.o V3DfgAstToDfg.o V3DfgCache.o V3DfgDecomposition.o V3DfgDfgToAst.o V3DfgOptimizer.o V3DfgPasses.o V3DfgPeephole.o V3DfgRegularize.o V3DupFinder.o V3EmitCMain.o V3EmitCMake.o V3EmitCModel.o V3EmitCSyms.o V3EmitMk.o V3EmitMkJson.o V3EmitXml.o V3ExecGraph.o V3Expand.o V3Force.o V3Fork.o V3Gate.o V3HierBlock.o V3Inline.o V3Inst.o V3InstrCount.o V3Interface.o V3Life.o V3LifePost.o V3LinkCells.o V3LinkDot.o V3LinkInc.o V3LinkJump.o V3LinkLValue.o V3LinkLevel.o V3LinkParse.o V3LinkResolve.o V3Localize.o V3MergeCond.o V3Name.o V3Order.o V3OrderGraphBuilder.o V3OrderMoveGraph.o V3OrderParallel.o V3OrderProcessDomains.o V3OrderSerial.o V3Param.o V3Premit.o V3ProtectLib.o V3Randomize.o V3Reloop.o V3Sampled.o V3Sched.o V3SchedAcyclic.o V3SchedPartition.o V3SchedReplicate.o V3SchedTiming.o V3SchedVirtIface.o V3Scope.o V3Scoreboard.o V3Slice.o V3Split.o V3SplitAs.o V3SplitVar.o V3StackCount.o V3Subst.o V3TSP.o V3Table.o V3Task.o V3Timing.o V3Trace.o V3TraceDecl.o V3Tristate.o V3Udp.o V3Undriven.o V3Unknown.o V3Unroll.o V3Width.o V3WidthCommit.o V3WidthSel.o   -Wl,--whole-archive -l:libtcmalloc_minimal.a -Wl,--no-whole-archive -lsodium  -lpthread -latomic -lm
-make[2]: Leaving directory '/home/kislay/verilator_mpi/src/obj_dbg'
-make[1]: Leaving directory '/home/kislay/verilator_mpi/src'
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_opt'
+make[2]: Entering directory '/home/kislay/verilator/src/obj_dbg'
+      Compile flags:  g++ -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC="" -DDEFENV_SYSTEMC_ARCH="" -DDEFENV_SYSTEMC_INCLUDE="" -DDEFENV_SYSTEMC_LIBDIR="" -DDEFENV_VERILATOR_ROOT="/usr/local/share/verilator"
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_dbg'
+make[2]: Entering directory '/home/kislay/verilator/src/obj_dbg'
+      Compile flags:  g++ -Og -ggdb -gz -DVL_DEBUG -D_GLIBCXX_DEBUG -DVERILATOR_INTERNAL_ -MMD -I. -I.. -I.. -I../../include -I../../include -MP -faligned-new -Wno-unused-parameter -Wno-shadow -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -DDEFENV_SYSTEMC="" -DDEFENV_SYSTEMC_ARCH="" -DDEFENV_SYSTEMC_INCLUDE="" -DDEFENV_SYSTEMC_LIBDIR="" -DDEFENV_VERILATOR_ROOT="/usr/local/share/verilator"
+make[2]: Leaving directory '/home/kislay/verilator/src/obj_dbg'
+make[1]: Leaving directory '/home/kislay/verilator/src'
 Build complete!
 
 Now type 'make test' to test.

@@ -304,7 +304,6 @@ public:
     VOptionBool unconnectedDrive() const { return m_unconnectedDrive; }
     void unconnectedDrive(const VOptionBool flag) { m_unconnectedDrive = flag; }
 };
-
 class AstNodeProcedure VL_NOT_FINAL : public AstNode {
     // IEEE procedure: initial, final, always
     // @astgen op2 := stmtsp : List[AstNode] // Note: op1 is used in some sub-types only
@@ -1306,7 +1305,6 @@ public:
     AstVar* varp() const VL_MT_STABLE { return m_varp; }  // [After Link] Pointer to variable
     void varp(AstVar* varp) { m_varp = varp; }
 };
-
 class AstNetlist final : public AstNode {
     // All modules are under this single top node.
     // Parents:   none
@@ -1370,7 +1368,6 @@ public:
     void timescaleSpecified(bool specified) { m_timescaleSpecified = specified; }
     bool timescaleSpecified() const { return m_timescaleSpecified; }
 };
-
 class AstPackageExport final : public AstNode {
     // A package export declaration
     //
@@ -4020,19 +4017,5 @@ public:
         addNodesp(new AstText{fl, textp, tracking});
     }
 };
-
-// void printChildModules(AstNodeModule* mod) {
-//     std::cout << "Module: " << mod->name() << std::endl;
-
-//     for (AstNode* stmt = mod->stmtsp(); stmt; stmt = stmt->nextp()) {
-//         if (AstCell* cell = VN_CAST(stmt, Cell)) {
-//             AstNodeModule* child = cell->modp();  // This is the instantiated module
-//             if (child) {
-//                 std::cout << "  Instantiates: " << child->name()
-//                           << " as instance: " << cell->name() << std::endl;
-//             }
-//         }
-//     }
-// }
 
 #endif  // Guard

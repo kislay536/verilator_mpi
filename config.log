@@ -29,8 +29,6 @@ uname -v = #23-Ubuntu SMP PREEMPT_DYNAMIC Fri Jun 13 23:02:20 UTC 2025
 
 PATH: /usr/local/mpich-4.1.2/bin/
 PATH: /home/kislay/.local/bin/
-PATH: /usr/local/mpich-4.1.2/bin/
-PATH: /home/kislay/.local/bin/
 PATH: /usr/local/sbin/
 PATH: /usr/local/bin/
 PATH: /usr/sbin/

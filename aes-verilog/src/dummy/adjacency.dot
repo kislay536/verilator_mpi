@@ -1,9 +1,0 @@
-Parent: $root.top.c.u1
-Parent: $root.top.c.rf
-Parent: $root.top.c
-  └─ Instance: u1, Module: alu, Hier: $root.top.c.u1
-  └─ Instance: rf, Module: regfile, Hier: $root.top.c.rf
-Parent: $root.top
-  └─ Instance: c, Module: cpu, Hier: $root.top.c
-Parent: $root
-  └─ Instance: top, Module: top, Hier: $root.top

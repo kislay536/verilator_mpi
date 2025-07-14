@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,31,125,56"/>
-<area shape="rect" id="Node000001" href="$classLibraryVertex.html" title=" " alt="" coords="180,5,289,31"/>
-<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="138,30,179,24,180,29,139,35"/>
-<area shape="rect" id="Node000002" href="$classLinkCellsVertex.html" title=" " alt="" coords="173,55,296,80"/>
-<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="139,51,173,56,172,61,138,56"/>
-</map>

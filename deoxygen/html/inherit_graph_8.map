@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,55,88,80"/>
-<area shape="rect" id="Node000001" href="$classInstDeVisitor.html" title=" " alt="" coords="144,5,251,31"/>
-<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="98,48,157,28,158,33,100,53"/>
-<area shape="rect" id="Node000002" href="$classInstVisitor.html" title=" " alt="" coords="153,55,241,80"/>
-<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="102,65,153,65,153,70,102,70"/>
-<area shape="rect" id="Node000003" href="$classLinkCellsVisitor.html" title=" " alt="" coords="136,104,259,129"/>
-<area shape="poly" id="edge6_Node000000_Node000003" title=" " alt="" coords="100,82,158,101,157,106,98,87"/>
-</map>

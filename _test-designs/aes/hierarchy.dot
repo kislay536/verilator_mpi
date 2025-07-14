@@ -1,0 +1,21 @@
+digraph G {
+  "$root" -> "$root.a1";
+  "$root.a1" -> "$root.a1.q0";
+  "$root.a1" -> "$root.a1.q1";
+  "$root.a1" -> "$root.a1.q2";
+  "$root.a1" -> "$root.a1.q3";
+  "$root.a1" -> "$root.a1.q4";
+  "$root.a1" -> "$root.a1.q5";
+  "$root.a1" -> "$root.a1.q6";
+  "$root.a1" -> "$root.a1.q7";
+  "$root.a1" -> "$root.a1.q8";
+  "$root.a1" -> "$root.a1.q9";
+  "$root.a1" -> "$root.a1.q10";
+  "$root.a1" -> "$root.a1.q11";
+  "$root.a1" -> "$root.a1.q12";
+  "$root.a1" -> "$root.a1.q13";
+  "$root.a1" -> "$root.a1.q14";
+  "$root.a1" -> "$root.a1.q15";
+  "$root" -> "$root.a2";
+  "$root" -> "$root.m0";
+}
